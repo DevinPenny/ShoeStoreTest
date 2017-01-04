@@ -3,7 +3,7 @@
  */
 package SeleniumTests;
 
-import PageObjects.CommonFunctions;
+import CommonComponents.CommonFunctions;
 import PageObjects.PageObjects;
 import org.junit.Assert;
 import org.junit.Rule;

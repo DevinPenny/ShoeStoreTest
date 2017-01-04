@@ -1,4 +1,4 @@
-package PageObjects;
+package CommonComponents;
 
 import TestDataManagement.ExcelDataManager;
 import TestDataManagement.PropertiesManager;
@@ -28,10 +28,9 @@ public class CommonFunctions {
     public Formatter formatter = null;
 
     ExcelDataManager queryExcel;
-
     public String LogFilePath = "src\\test\\java\\TestReporting\\test.log";
     public String PropertiesPath = "src\\test\\java\\TestDataManagement\\AutomationProperties.properties";
-    public String excelPath = "src\\test\\java\\Utilities\\ExcelData\\TestExecutionList.xlsx";
+    public String excelPath = "src\\test\\java\\TestDataManagement\\ExcelData.xlsx";
     public String excelQuery = "SELECT Test_name from Sheet2 where Execute_test = 'Y'";
 
     public HashMap<Integer,HashMap<String,String>> QueryData;
@@ -71,7 +70,9 @@ public class CommonFunctions {
             logger.severe("Caught formatter Exception: " + e);
         }
 
-        //query excel as a database, this is a powerful way to use SQL agaainst an excel document
+        //query excel as a database, this is a powerful way to use SQL against an excel document
+        //This is not needed for the shoe store test example but I think it is cool and want to show it off
+
         try {
             queryExcel = new ExcelDataManager();
             QueryData = queryExcel.queryExcel(excelPath, excelQuery);
@@ -97,7 +98,6 @@ public class CommonFunctions {
             switch (testProperties.get("TestBrowser")){
                 case "firefox":
                     //FirefoxProfile firefoxProfile = new FirefoxProfile();
-                    //firefoxProfile.setAssumeUntrustedCertificateIssuer(false);
                     driver = new FirefoxDriver();
                     break;
                 case "internetExplorer": driver = new InternetExplorerDriver();
