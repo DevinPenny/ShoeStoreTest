@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4cc3a90-416b-4b55-a301-cb86c34a5797" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest1.java" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/CommonComponents/CommonFunctions.class" afterPath="$PROJECT_DIR$/target/test-classes/CommonComponents/CommonFunctions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/NavigationObjects/NavigationObjects.class" afterPath="$PROJECT_DIR$/target/test-classes/NavigationObjects/NavigationObjects.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/SeleniumTests/ShoeStoreTest1.class" afterPath="$PROJECT_DIR$/target/test-classes/SeleniumTests/ShoeStoreTest1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/..\TestReporting\ShoeStoreTest.log" afterPath="$PROJECT_DIR$/..\TestReporting\ShoeStoreTest.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CommonComponents/CommonFunctions.java" afterPath="$PROJECT_DIR$/src/test/java/CommonComponents/CommonFunctions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/NavigationObjects/NavigationObjects.java" afterPath="$PROJECT_DIR$/src/test/java/NavigationObjects/NavigationObjects.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TestDataManagement/PropertiesFiles/AutomationProperties.properties" afterPath="$PROJECT_DIR$/src/test/java/TestDataManagement/PropertiesFiles/AutomationProperties.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory2.java" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory2.java" />
     </list>
     <ignored path="ShoeStoreTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,13 +70,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShoeStoreStory2.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShoeStoreStory2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.788703">
-              <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoeStoreStory1.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.7259414">
+              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+              <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -142,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java" />
         <option value="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest1.java" />
         <option value="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory2.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1.java" />
       </list>
     </option>
   </component>
@@ -842,10 +847,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.788703">
-          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7259414">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>

@@ -1,3 +1,5 @@
+package SeleniumTests;
+
 /**
  * Created by Devin Penny on 1/4/17.
  *
@@ -10,12 +12,9 @@
  *
  *  There should be an area to submit email address
  *  on successful submission of a valid email address user should receive a confirmation message
- *" Thanks! We will notify you of our new shoes at this email: <users email address>"
+ *    "Thanks! We will notify you of our new shoes at this email: <users email address>"
  *
  */
-
-
-package SeleniumTests;
 
 import CommonComponents.CommonFunctions;
 import NavigationObjects.NavigationObjects;
@@ -37,8 +36,9 @@ public class ShoeStoreStory2 extends CommonFunctions {
         driver.manage().window().maximize();
 
         logger.info("navigate to page for first test");
-        driver.get(testProperties.get("ApplicationURI"));
-        //navigation.NavigateToPage();
+        navigation.NavigateToPage();
+        //driver.get(testProperties.get("ApplicationURI"));
+
 
         logger.info("Verify page tittle to prove application page loaded");
         MainPage.VerifyPageTitle();
@@ -55,7 +55,7 @@ public class ShoeStoreStory2 extends CommonFunctions {
 
         logger.info("Verify the user has been notified of successful email submission");
         MainPage.VerifyEmailConfirmation(randomEmail);
-        
+
         //driver.quit();
 
     }
