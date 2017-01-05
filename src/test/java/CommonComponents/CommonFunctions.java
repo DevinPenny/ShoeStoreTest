@@ -82,8 +82,8 @@ public class CommonFunctions {
         }catch (Exception e){
             logger.severe("Caught queryExcel Exception: " + e);
         }
+        */
 
-*/
         //configure the logger to use file handler and formatter
         fileHandler.setLevel(Level.ALL);
         fileHandler.setFormatter(formatter);
