@@ -13,7 +13,9 @@ import java.util.Set;
 
 public class PropertiesManager {
 
-    public String parameterFilePath = "src\\test\\java\\TestDataManagement\\PropertiesData\\AutomationProperties.properties";
+    public String parameterFilePath = "/Users/devinfox/IdeaProjects/ShoeStoreTest/src/test/java/TestDataManagement/PropertiesFiles/AutomationProperties.properties";
+
+    //public String parameterFilePath = "./PropertiesFiles/AutomationProperties.properties";
 
     public HashMap<String,String> testProperties = new HashMap<String,String>();
 

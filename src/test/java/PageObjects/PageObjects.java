@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import TestDataManagement.PropertiesManager;
 
-
 public class PageObjects {
 
     WebDriver driver;
@@ -36,8 +35,9 @@ public class PageObjects {
 
     }
 
-    public void NavigateToPage(){
+    public void NavigateToPage(String pageAddress){
 
+        driver.get(pageAddress);
     }
 
 }

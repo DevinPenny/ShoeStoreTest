@@ -33,10 +33,12 @@ public class ShoeStoreTest2 extends CommonFunctions {
     @Test
     public void SecondTestToExecute() {
 
-        MainPage.NavigateToPage();
+        logger.info("navigate to page for second test");
+        MainPage.NavigateToPage(testProperties.get("ApplicationURI"));
 
         //Verify the result
         Assert.assertTrue(MainPage.GetTextFromPage().contains("Some Message"));
+
 
     }
 

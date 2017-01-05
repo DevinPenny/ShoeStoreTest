@@ -30,9 +30,9 @@ public class ShoeStoreTest1 extends CommonFunctions {
     @Test
     public void FirstTestToExecute() {
 
-        String ApplicationURI = testProperties.get("ApplicationURI");
 
-        MainPage.NavigateToPage();
+        logger.info("navigate to page for first test");
+        MainPage.NavigateToPage(testProperties.get("ApplicationURI"));
 
         //Verify the result
         Assert.assertTrue(MainPage.GetTextFromPage().contains("Some Message"));

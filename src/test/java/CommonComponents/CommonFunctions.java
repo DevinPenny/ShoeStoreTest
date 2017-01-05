@@ -29,8 +29,8 @@ public class CommonFunctions {
 
     ExcelDataManager queryExcel;
     public String LogFilePath = "src\\test\\java\\TestReporting\\test.log";
-    public String PropertiesPath = "src\\test\\java\\TestDataManagement\\AutomationProperties.properties";
-    public String excelPath = "src\\test\\java\\TestDataManagement\\ExcelData.xlsx";
+
+
     public String excelQuery = "SELECT Test_name from Sheet2 where Execute_test = 'Y'";
 
     public HashMap<Integer,HashMap<String,String>> QueryData;
@@ -73,6 +73,7 @@ public class CommonFunctions {
         //query excel as a database, this is a powerful way to use SQL against an excel document
         //This is not needed for the shoe store test example but I think it is cool and want to show it off
 
+        /*
         try {
             queryExcel = new ExcelDataManager();
             QueryData = queryExcel.queryExcel(excelPath, excelQuery);
@@ -80,6 +81,7 @@ public class CommonFunctions {
             logger.severe("Caught queryExcel Exception: " + e);
         }
 
+*/
         //configure the logger to use file handler and formatter
         fileHandler.setLevel(Level.ALL);
         fileHandler.setFormatter(formatter);
