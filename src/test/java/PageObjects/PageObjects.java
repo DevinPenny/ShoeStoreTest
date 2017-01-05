@@ -3,11 +3,12 @@
  */
 package PageObjects;
 
+import CommonComponents.CommonFunctions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
-public class PageObjects {
+public class PageObjects extends CommonFunctions {
 
     WebDriver driver;
 
@@ -35,9 +36,9 @@ public class PageObjects {
 
     }
 
-    public void NavigateToPage(String pageAddress){
-
+    public void NavigateToPage(){
+        //String testPath = testProperties.get("ApplicationURI");
         driver.get("https://rb-shoe-store.herokuapp.com/");
-        //driver.get(pageAddress);
+        //driver.get(testPath);
     }
 }

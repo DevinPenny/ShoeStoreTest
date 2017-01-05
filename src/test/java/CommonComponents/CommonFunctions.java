@@ -14,8 +14,6 @@ import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-//import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -103,18 +101,21 @@ public class CommonFunctions {
         try {
             switch (testProperties.get("TestBrowser")){
                 case "firefox":
+                    logger.info("executing tests with Firefox browser");
                     System.setProperty("webdriver.gecko.driver","geckodriver_macos/geckodriver");
-                    DesiredCapabilities capabilities =DesiredCapabilities.firefox();
-                    capabilities.setCapability("marionette",true);
-
-                    //FirefoxProfile firefoxProfile = new FirefoxProfile();
-                    driver = new FirefoxDriver(capabilities);
+                    DesiredCapabilities ffCap =DesiredCapabilities.firefox();
+                    ffCap.setCapability("marionette",true);
+                    driver = new FirefoxDriver(ffCap);
                     break;
+                case "chrome":
+                    logger.info("executing tests with chrome browser");
+                    System.setProperty("webdriver.chrome.driver", "geckodriver_macos/geckodriver");
+                    DesiredCapabilities chromeCap =DesiredCapabilities.chrome();
+                    chromeCap.setCapability("marionette",true);
+                    driver = new ChromeDriver(chromeCap);
+                    break;
+                //currently IE has not been fully configured so do not use it at this time
                 case "internetExplorer": driver = new InternetExplorerDriver();
-                    break;
-                //chrome is unique in that you have to provide the executable path
-                case "chrome":System.setProperty("webdriver.chrome.driver", "path");
-                    driver = new ChromeDriver();
                     break;
             }
         } catch(Exception e) {
@@ -125,7 +126,6 @@ public class CommonFunctions {
 
         //maximize the browser window for test execution
         driver.manage().window().maximize();
-
         logger.info("Test preparations complete!");
     }
 

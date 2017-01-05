@@ -29,8 +29,6 @@ public class ExcelDataManager {
 
                 for(int x = 0; x < dataColl.size();x++) {
                     String testData=dataColl.get(x);
-                    //System.out.println(testData);
-                    //System.out.println(recordset.getField(testData));
                     value.put(testData, recordset.getField(testData));
                 }
 

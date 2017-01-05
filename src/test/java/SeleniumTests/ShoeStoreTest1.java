@@ -32,7 +32,7 @@ public class ShoeStoreTest1 extends CommonFunctions {
 
 
         logger.info("navigate to page for first test");
-        MainPage.NavigateToPage(testProperties.get("ApplicationURI"));
+        MainPage.NavigateToPage();
 
         //Verify the result
         Assert.assertTrue(MainPage.GetTextFromPage().contains("Some Message"));
