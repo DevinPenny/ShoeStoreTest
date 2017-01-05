@@ -31,7 +31,7 @@ public class CommonFunctions {
     public Formatter formatter = null;
 
     ExcelDataManager queryExcel;
-    public String LogFilePath = "..\\TestReporting\\test.log";
+    public String LogFilePath = "..\\TestReporting\\ShoeStoreTest.log";
 
     public String excelQuery = "SELECT Test_name from Sheet2 where Execute_test = 'Y'";
 
@@ -109,9 +109,9 @@ public class CommonFunctions {
                     break;
                 case "chrome":
                     logger.info("executing tests with chrome browser");
-                    //System.setProperty("webdriver.chrome.driver", "geckodriver_macos/geckodriver");
-                    //DesiredCapabilities chromeCap =DesiredCapabilities.chrome();
-                    //chromeCap.setCapability("marionette",true);
+                    System.setProperty("webdriver.chrome.driver", "chromedriver_macos/chromedriver");
+                    DesiredCapabilities chromeCap =DesiredCapabilities.chrome();
+                    chromeCap.setCapability("marionette",true);
                     driver = new ChromeDriver();
                     break;
                 //currently IE has not been fully configured so do not use it at this time

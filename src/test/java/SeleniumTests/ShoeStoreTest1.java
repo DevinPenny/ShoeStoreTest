@@ -17,18 +17,6 @@ public class ShoeStoreTest1 extends CommonFunctions {
     NavigationObjects navigation = new NavigationObjects();
     RandomDataGenerator random = new RandomDataGenerator();
 
-    /*
-    @Rule
-    public TestWatcher listen = new TestWatcher() {
-
-        @Override
-        public void failed (Throwable t, Description description){
-            //report error to test management tool here, this could be a web service call to insert data into rally or quality center
-            logger.severe("Test Failed!");
-            logger.severe(description.getClassName() + ", " + description.getMethodName());
-        }
-    };
-*/
 
     @Test
     public void VerifyPageAccess() {
@@ -37,16 +25,11 @@ public class ShoeStoreTest1 extends CommonFunctions {
         driver.manage().window().maximize();
 
         logger.info("navigate to page for first test");
-        driver.get("https://rb-shoe-store.herokuapp.com/");
-        //navigation.NavigateToPage();
+        //driver.get(testProperties.get("ApplicationURI"));
+        navigation.NavigateToPage();
 
         //Verify the result
         MainPage.VerifyPageTitle();
-    }
-
-
-    @Test
-    public void VerifyEmailSubmission() {
 
         logger.info("create random email address for test");
         String randomEmail = random.GetRandomString(7);
@@ -58,5 +41,7 @@ public class ShoeStoreTest1 extends CommonFunctions {
 
         //click remind email button
         MainPage.ClickRemindEmail();
+
     }
+
 }

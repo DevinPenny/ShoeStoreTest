@@ -19,7 +19,7 @@ public class PropertiesManager {
 
     //public String parameterFilePath = "./PropertiesFiles/AutomationProperties.properties";
 
-    public HashMap<String,String> testProperties = new HashMap<String,String>();
+    public HashMap<String,String> testProperties = new HashMap<>();
 
     public HashMap<String,String> GetPropertiesData(){
         Properties data = new Properties();
@@ -32,10 +32,9 @@ public class PropertiesManager {
             String strVal;
 
             Set key = data.keySet();
-            Iterator iterate = key.iterator();
 
-            while(iterate.hasNext()) {
-                strKey = (String) iterate.next();
+            for (Object aKey : key) {
+                strKey = (String) aKey;
                 strVal = data.get(strKey).toString();
                 System.out.println(strKey + ":" + strVal);
                 testProperties.put(strKey, strVal);
