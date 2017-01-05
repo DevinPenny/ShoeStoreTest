@@ -19,20 +19,21 @@ package SeleniumTests;
 import CommonComponents.CommonFunctions;
 import NavigationObjects.NavigationObjects;
 import PageObjects.PageObjects;
-import TestDataManagement.RandomDataGenerator;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 
 public class ShoeStoreStory1 extends CommonFunctions {
 
     PageObjects MainPage = new PageObjects(driver);
     NavigationObjects navigation = new NavigationObjects();
-    RandomDataGenerator random = new RandomDataGenerator();
 
     @Test
-    public void VerifyEmailNotifications() {
+    public void VerifyMonthlyDisplay() {
 
-        String monthLink = "january";
 
         logger.info("Maximize browser window for test reliability");
         driver.manage().window().maximize();
@@ -45,15 +46,30 @@ public class ShoeStoreStory1 extends CommonFunctions {
         MainPage.VerifyPageTitle();
 
 
-        logger.info("navigate to the month of" + monthLink);
+
+        for(int month=1; month<11; month++){
+
+            logger.info("navigate to month " + month);
+            driver.findElement(By.xpath(".nav > li:nth-child(1) > a:nth-child(" + month + ")")).click();
+
+
+            //determine number of shoes for the month
+
+            WebElement table_element = driver.findElement(By.id("shoe_list"));
+            //List<WebElement> shoeList =table_element.findElements(By.xpath("id('shoe_list')ul/tbody/tr"));
+            List<WebElement> shoeList =table_element.findElements(By.cssSelector(".shoe_result"));
+
+
+            for(int shoe=1; shoe<11; shoe++){
+
+                logger.info("verify the blurb for shoe");
 
 
 
-        logger.info("verify the blurb for shoe");
+                logger.info("verify the image of the shoe");
 
-        logger.info("verify the image of the shoe");
-
-        logger.info("verify the pricing of the shoe");
-
+                logger.info("verify the pricing of the shoe");
+            }
+        }
     }
 }
