@@ -1,14 +1,14 @@
-Jan 05, 2017 2:10:50 PM CommonComponents.CommonFunctions WebDriverSetup
-INFO: executing tests with chrome browser
-Jan 05, 2017 2:10:53 PM CommonComponents.CommonFunctions WebDriverSetup
+Jan 05, 2017 2:51:32 PM CommonComponents.CommonFunctions WebDriverSetup
+INFO: executing tests with Firefox browser
+Jan 05, 2017 2:51:36 PM CommonComponents.CommonFunctions WebDriverSetup
 INFO: Test preparations complete!
-Jan 05, 2017 2:10:53 PM SeleniumTests.ShoeStoreTest1 VerifyPageAccess
+Jan 05, 2017 2:51:36 PM SeleniumTests.ShoeStoreTest1 VerifyEmailNotifications
 INFO: Maximize browser window for test reliability
-Jan 05, 2017 2:10:53 PM SeleniumTests.ShoeStoreTest1 VerifyPageAccess
+Jan 05, 2017 2:51:36 PM SeleniumTests.ShoeStoreTest1 VerifyEmailNotifications
 INFO: navigate to page for first test
-Jan 05, 2017 2:10:53 PM CommonComponents.CommonFunctions WebDriverShutDown
+Jan 05, 2017 2:51:37 PM CommonComponents.CommonFunctions WebDriverShutDown
 INFO: Test Clean up complete
-Jan 05, 2017 2:10:53 PM CommonComponents.CommonFunctions$1 failed
-SEVERE: Test: SeleniumTests.ShoeStoreTest1 Failed to execute When attempting method VerifyPageAccess
-Jan 05, 2017 2:10:53 PM CommonComponents.CommonFunctions$1 failed
+Jan 05, 2017 2:51:37 PM CommonComponents.CommonFunctions$1 failed
+SEVERE: Test: SeleniumTests.ShoeStoreTest1 Failed to execute When attempting method VerifyEmailNotifications
+Jan 05, 2017 2:51:37 PM CommonComponents.CommonFunctions$1 failed
 SEVERE: Stacktrace: java.lang.NullPointerException

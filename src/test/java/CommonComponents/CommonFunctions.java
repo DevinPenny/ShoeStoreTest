@@ -24,7 +24,7 @@ import java.util.logging.*;
 
 public class CommonFunctions {
 
-    public WebDriver driver;
+    protected WebDriver driver;
 
     public Logger logger = Logger.getLogger(CommonFunctions.class.getName());
     public Handler fileHandler = null;

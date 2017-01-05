@@ -31,9 +31,12 @@ public class PageObjects extends CommonFunctions {
         driver.findElement(By.id(EnterEmailSelector)).sendKeys(email);
     }
 
-    public String GetTextFromPage() {
+    public void VerifyEmailConfirmation(String emailAddress) {
 
-        return driver.findElement(By.id(GetTextFromPageSelector)).getText();
+        Assert.assertTrue(driver.findElement(By.id(GetTextFromPageSelector))
+                .getText()
+                .equals("Thanks! We will notify you of our new shoes at this email: " + emailAddress + "@shoestoretesting.com"));
+
 
     }
     public void VerifyPageTitle() {
