@@ -37,7 +37,7 @@ public class PageObjects {
 
     public void NavigateToPage(String pageAddress){
 
-        //driver.get("https://rb-shoe-store.herokuapp.com/");
-        driver.get(pageAddress);
+        driver.get("https://rb-shoe-store.herokuapp.com/");
+        //driver.get(pageAddress);
     }
 }

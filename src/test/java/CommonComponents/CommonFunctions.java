@@ -15,7 +15,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 //import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -31,8 +33,7 @@ public class CommonFunctions {
     public Formatter formatter = null;
 
     ExcelDataManager queryExcel;
-    public String LogFilePath = "src\\test\\java\\TestReporting\\test.log";
-
+    public String LogFilePath = "..\\TestReporting\\test.log";
 
     public String excelQuery = "SELECT Test_name from Sheet2 where Execute_test = 'Y'";
 
@@ -102,19 +103,25 @@ public class CommonFunctions {
         try {
             switch (testProperties.get("TestBrowser")){
                 case "firefox":
+                    System.setProperty("webdriver.gecko.driver","geckodriver_macos/geckodriver");
+                    DesiredCapabilities capabilities =DesiredCapabilities.firefox();
+                    capabilities.setCapability("marionette",true);
+
                     //FirefoxProfile firefoxProfile = new FirefoxProfile();
-                    driver = new FirefoxDriver();
+                    driver = new FirefoxDriver(capabilities);
                     break;
                 case "internetExplorer": driver = new InternetExplorerDriver();
                     break;
                 //chrome is unique in that you have to provide the executable path
-                case "chrome":System.setProperty("webdriver.chrome.driver", "c:/Selenium/chromedriver.exe");
+                case "chrome":System.setProperty("webdriver.chrome.driver", "path");
                     driver = new ChromeDriver();
                     break;
             }
         } catch(Exception e) {
             logger.severe("Error Loading driver for: " + testProperties.get("TestBrowser") + " exception:" + e);
         }
+
+        logger.info("maximize browser window");
 
         //maximize the browser window for test execution
         driver.manage().window().maximize();

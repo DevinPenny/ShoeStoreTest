@@ -1,0 +1,8 @@
+Jan 05, 2017 11:27:58 AM CommonComponents.CommonFunctions WebDriverSetup
+INFO: maximize browser window
+Jan 05, 2017 11:27:58 AM CommonComponents.CommonFunctions WebDriverSetup
+INFO: Test preparations complete!
+Jan 05, 2017 11:27:58 AM SeleniumTests.ShoeStoreTest1 FirstTestToExecute
+INFO: navigate to page for first test
+Jan 05, 2017 11:27:58 AM CommonComponents.CommonFunctions WebDriverShutDown
+INFO: Test Clean up complete
