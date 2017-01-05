@@ -41,6 +41,4 @@ public class ShoeStoreTest2 extends CommonFunctions {
 
 
     }
-
-
 }

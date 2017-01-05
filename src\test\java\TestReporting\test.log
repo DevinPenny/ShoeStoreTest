@@ -1,2 +1,2 @@
-Jan 05, 2017 1:14:09 AM CommonComponents.CommonFunctions WebDriverSetup
+Jan 05, 2017 1:29:21 AM CommonComponents.CommonFunctions WebDriverSetup
 SEVERE: Error Loading driver for: firefox exception:java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases

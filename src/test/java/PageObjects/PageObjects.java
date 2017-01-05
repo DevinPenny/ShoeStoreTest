@@ -5,7 +5,7 @@ package PageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import TestDataManagement.PropertiesManager;
+
 
 public class PageObjects {
 
@@ -37,7 +37,7 @@ public class PageObjects {
 
     public void NavigateToPage(String pageAddress){
 
+        //driver.get("https://rb-shoe-store.herokuapp.com/");
         driver.get(pageAddress);
     }
-
 }
