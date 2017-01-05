@@ -8,19 +8,18 @@ import java.util.Random;
 public class RandomDataGenerator {
 
     //create a string of random characters that is of variable length
-    public RandomDataGenerator GetRandomString(int length){
+    public String GetRandomString(int intLength){
 
-        String characters = "0123456789abcdefghijklmnopqrstuvwxyz";
+        String characters = "abcdefghijklmnopqrstuvwxyz0123456789";
         Random random = new Random();
+        StringBuilder randomString = new StringBuilder(intLength);
 
-        StringBuilder randomString = new StringBuilder(length);
-
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < 5; i++) {
             randomString.append(characters.charAt(random.nextInt(characters.length())));
         }
 
-        //return randomString.toString();
-        return null;
+       //return random string value
+        return randomString.toString();
     }
 
 }

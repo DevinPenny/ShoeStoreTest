@@ -4,6 +4,7 @@
 package PageObjects;
 
 import CommonComponents.CommonFunctions;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -35,9 +36,8 @@ public class PageObjects extends CommonFunctions {
         return driver.findElement(By.id(GetTextFromPageSelector)).getText();
 
     }
-    public String VerifyPageTitle() {
+    public void VerifyPageTitle() {
 
-        return driver.getTitle();
-
+        Assert.assertTrue(driver.getTitle().equals("Shoe Store: Welcome to the Shoe Store"));
     }
 }
