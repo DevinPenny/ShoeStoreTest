@@ -2,20 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4cc3a90-416b-4b55-a301-cb86c34a5797" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/TestReporting/ExtentReports.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/TestReporting/ExtentReports.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/NavigationObjects/NavigationObjects.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest2.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/SeleniumTests/ShoeStoreTest2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/SeleniumTests/ShoeStoreTest2.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/CommonComponents/CommonFunctions$1.class" afterPath="$PROJECT_DIR$/target/test-classes/CommonComponents/CommonFunctions$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/CommonComponents/CommonFunctions.class" afterPath="$PROJECT_DIR$/target/test-classes/CommonComponents/CommonFunctions.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/PageObjects.class" afterPath="$PROJECT_DIR$/target/test-classes/PageObjects/PageObjects.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/SeleniumTests/ShoeStoreTest1$1.class" afterPath="$PROJECT_DIR$/target/test-classes/SeleniumTests/ShoeStoreTest1$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/SeleniumTests/ShoeStoreTest1.class" afterPath="$PROJECT_DIR$/target/test-classes/SeleniumTests/ShoeStoreTest1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/SeleniumTests/ShoeStoreTest2.class" afterPath="$PROJECT_DIR$/target/test-classes/SeleniumTests/ShoeStoreTest2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TestDataManagement/ExcelDataManager.class" afterPath="$PROJECT_DIR$/target/test-classes/TestDataManagement/ExcelDataManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/..\TestReporting\test.log" afterPath="$PROJECT_DIR$/..\TestReporting\test.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CommonComponents/CommonFunctions.java" afterPath="$PROJECT_DIR$/src/test/java/CommonComponents/CommonFunctions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest1.java" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest2.java" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TestDataManagement/ExcelDataManager.java" afterPath="$PROJECT_DIR$/src/test/java/TestDataManagement/ExcelDataManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TestDataManagement/PropertiesFiles/AutomationProperties.properties" afterPath="$PROJECT_DIR$/src/test/java/TestDataManagement/PropertiesFiles/AutomationProperties.properties" />
     </list>
     <ignored path="ShoeStoreTest.iws" />
@@ -39,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CommonFunctions.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CommonFunctions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CommonComponents/CommonFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.8912134">
-              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -51,12 +51,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShoeStoreTest1.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShoeStoreTest1.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="51" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="51" />
-              <folding />
+            <state vertical-scroll-proportion="0.8472803">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,46 +67,11 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+              <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#690#691#0" expanded="true" />
-                <element signature="e#778#779#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AutomationProperties.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestDataManagement/PropertiesFiles/AutomationProperties.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShoeStoreTest2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExcelDataManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestDataManagement/ExcelDataManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#709#710#0" expanded="true" />
+                <element signature="e#786#787#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,11 +110,14 @@
         <option value="$PROJECT_DIR$/src/test/java/TestReporting/ExtentReports.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/TestDataManagement/ExcelDataManager.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest1.java" />
         <option value="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest2.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestDataManagement/PropertiesFiles/AutomationProperties.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java" />
         <option value="$PROJECT_DIR$/src/test/java/CommonComponents/CommonFunctions.java" />
+        <option value="$PROJECT_DIR$/src/test/java/PageObjects/navigation.java" />
+        <option value="$PROJECT_DIR$/src/test/java/PageObjects/NavigationObjects.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestDataManagement/PropertiesFiles/AutomationProperties.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/NavigationObjects/NavigationObjects.java" />
+        <option value="$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest1.java" />
       </list>
     </option>
   </component>
@@ -258,6 +228,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="TestReporting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShoeStoreTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShoeStoreTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="TestDataManagement" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -331,6 +327,18 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PageObjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -342,7 +350,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="geckodriver_win64" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NavigationObjects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -356,7 +376,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="geckodriver_macos" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -687,40 +707,40 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 11h 32m 35s.xml">
+    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 11h 53m 33s.xml">
       <configuration name="ShoeStoreTest1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 11h 40m 07s.xml">
+    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 12h 13m 32s.xml">
       <configuration name="ShoeStoreTest1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 11h 44m 03s.xml">
+    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 12h 14m 10s.xml">
       <configuration name="ShoeStoreTest1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 11h 44m 55s.xml">
+    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 12h 24m 14s.xml">
       <configuration name="ShoeStoreTest1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 11h 45m 43s.xml">
+    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 12h 31m 10s.xml">
       <configuration name="ShoeStoreTest1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 11h 46m 36s.xml">
+    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 12h 32m 22s.xml">
       <configuration name="ShoeStoreTest1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 11h 47m 30s.xml">
+    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 12h 34m 25s.xml">
       <configuration name="ShoeStoreTest1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 11h 49m 05s.xml">
+    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 12h 37m 48s.xml">
       <configuration name="ShoeStoreTest1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 11h 50m 16s.xml">
+    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 12h 42m 26s.xml">
       <configuration name="ShoeStoreTest1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 11h 51m 12s.xml">
+    <history-entry file="ShoeStoreTest1 - 2017.01.05 at 12h 45m 36s.xml">
       <configuration name="ShoeStoreTest1" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -729,10 +749,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -791,24 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestReporting/test.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestDataManagement/ExcelDataManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestDataManagement/RandomDataGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.78451884">
@@ -827,21 +829,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest1.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestDataManagement/PropertiesFiles/AutomationProperties.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.09414226">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest2.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/NavigationObjects/NavigationObjects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.43933055">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="e#206#207#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestDataManagement/ExcelDataManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0669456">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CommonComponents/CommonFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -849,29 +872,29 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestDataManagement/PropertiesFiles/AutomationProperties.properties">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestReporting/test.log">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CommonComponents/CommonFunctions.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreTest1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8912134">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.8472803">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

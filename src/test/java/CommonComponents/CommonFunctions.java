@@ -109,10 +109,10 @@ public class CommonFunctions {
                     break;
                 case "chrome":
                     logger.info("executing tests with chrome browser");
-                    System.setProperty("webdriver.chrome.driver", "geckodriver_macos/geckodriver");
-                    DesiredCapabilities chromeCap =DesiredCapabilities.chrome();
-                    chromeCap.setCapability("marionette",true);
-                    driver = new ChromeDriver(chromeCap);
+                    //System.setProperty("webdriver.chrome.driver", "geckodriver_macos/geckodriver");
+                    //DesiredCapabilities chromeCap =DesiredCapabilities.chrome();
+                    //chromeCap.setCapability("marionette",true);
+                    driver = new ChromeDriver();
                     break;
                 //currently IE has not been fully configured so do not use it at this time
                 case "internetExplorer": driver = new InternetExplorerDriver();
@@ -122,10 +122,6 @@ public class CommonFunctions {
             logger.severe("Error Loading driver for: " + testProperties.get("TestBrowser") + " exception:" + e);
         }
 
-        logger.info("maximize browser window");
-
-        //maximize the browser window for test execution
-        driver.manage().window().maximize();
         logger.info("Test preparations complete!");
     }
 

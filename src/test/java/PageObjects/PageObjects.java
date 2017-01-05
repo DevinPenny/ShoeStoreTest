@@ -12,8 +12,8 @@ public class PageObjects extends CommonFunctions {
 
     WebDriver driver;
 
-    public static final String ClickButtonSelector = "SomeSelector";
-    public static final String EnterTextInFieldSelector = "SomeSelector";
+    public static final String ClickRemindEmail = "remind_email_submit";
+    public static final String EnterEmailSelector = "remind_email_input";
     public static final String GetTextFromPageSelector = "SomeSelector";
 
     public PageObjects(WebDriver driver) {
@@ -21,13 +21,13 @@ public class PageObjects extends CommonFunctions {
     }
 
 
-    public void ClickButton(){
-        driver.findElement(By.id(ClickButtonSelector)).click();
+    public void ClickRemindEmail(){
+        driver.findElement(By.id(ClickRemindEmail)).click();
 
     }
 
-    public void EnterTextInField() {
-        driver.findElement(By.id(EnterTextInFieldSelector)).sendKeys("SomeText");
+    public void EnterEmailAddress(String email) {
+        driver.findElement(By.id(EnterEmailSelector)).sendKeys(email);
     }
 
     public String GetTextFromPage() {
@@ -35,10 +35,9 @@ public class PageObjects extends CommonFunctions {
         return driver.findElement(By.id(GetTextFromPageSelector)).getText();
 
     }
+    public String VerifyPageTitle() {
 
-    public void NavigateToPage(){
-        //String testPath = testProperties.get("ApplicationURI");
-        driver.get("https://rb-shoe-store.herokuapp.com/");
-        //driver.get(testPath);
+        return driver.getTitle();
+
     }
 }
