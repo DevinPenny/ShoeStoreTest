@@ -19,6 +19,7 @@ package SeleniumTests;
 import CommonComponents.CommonFunctions;
 import NavigationObjects.NavigationObjects;
 import PageObjects.PageObjects;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -46,13 +47,12 @@ public class ShoeStoreStory1 extends CommonFunctions {
         MainPage.VerifyPageTitle();
 
         //this for loop needs to go into the page objects after it is working
-
         for(int month=1; month<12; month++){
 
             logger.info("navigate to month " + month);
             driver.findElement(By.xpath(".nav > li:nth-child(1) > a:nth-child(" + month + ")")).click();
 
-            //determine number of shoes for the month, here are a few posible ways to do it
+            //determine number of shoes for the month, here are a few possible ways to do it
 
             List<WebElement> shoeCount = driver.findElements(By.xpath("[@id='shoe_list']//li"));
 
@@ -67,12 +67,16 @@ public class ShoeStoreStory1 extends CommonFunctions {
 
                 logger.info("verify the blurb for shoe");
                 String shoeBlurb = driver.findElement(By.cssSelector(".shoe_result_value:nth-of-type(" + i + ").shoe_description")).getText();
+                Assert.assertFalse(shoeBlurb.isEmpty());
 
                 logger.info("verify the image of the shoe");
                 //find the image and verify isPresent();
+                WebElement shoeImage = driver.findElement(By.cssSelector("selector"));
+                Assert.assertTrue(shoeImage.isDisplayed());
 
                 logger.info("verify the pricing of the shoe");
                 String shoePrice = driver.findElement(By.cssSelector(".shoe_result_value:nth-of-type(" + i + ").shoe_price")).getText();
+                Assert.assertFalse(shoePrice.isEmpty());
 
             }
         }
