@@ -15,7 +15,7 @@ public class PageObjects extends CommonFunctions {
 
     public static final String ClickRemindEmail = "remind_email_submit";
     public static final String EnterEmailSelector = "remind_email_input";
-    public static final String GetTextFromPageSelector = "flash";
+    public static final String GetTextFromPageSelector = ".//*[@id='flash']/div";
 
     public PageObjects(WebDriver driver) {
         this.driver = driver;
@@ -33,7 +33,7 @@ public class PageObjects extends CommonFunctions {
 
     public void VerifyEmailConfirmation(String emailAddress) {
 
-        Assert.assertTrue(driver.findElement(By.id(GetTextFromPageSelector))
+        Assert.assertTrue(driver.findElement(By.xpath(GetTextFromPageSelector))
                 .getText()
                 .equals("Thanks! We will notify you of our new shoes at this email: " + emailAddress + "@shoestoretesting.com"));
     }

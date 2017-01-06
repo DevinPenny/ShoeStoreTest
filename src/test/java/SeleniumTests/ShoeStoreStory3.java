@@ -21,11 +21,12 @@ import NavigationObjects.NavigationObjects;
 import PageObjects.PageObjects;
 import TestDataManagement.RandomDataGenerator;
 import org.junit.*;
+import org.openqa.selenium.By;
 
 import java.util.concurrent.TimeUnit;
 
 
-public class ShoeStoreStory2 extends CommonFunctions {
+public class ShoeStoreStory3 extends CommonFunctions {
 
     PageObjects MainPage = new PageObjects(driver);
     NavigationObjects navigation = new NavigationObjects();
@@ -38,29 +39,31 @@ public class ShoeStoreStory2 extends CommonFunctions {
         driver.manage().window().maximize();
 
         logger.info("navigate to page for first test");
-        navigation.NavigateToPage();
-        //driver.get(testProperties.get("ApplicationURI"));
-
+        driver.get(testProperties.get("ApplicationURI"));
 
         logger.info("Verify page tittle to prove application page loaded");
-        MainPage.VerifyPageTitle();
+        Assert.assertTrue(driver.getTitle().equals("Shoe Store: Welcome to the Shoe Store"));
 
         String randomEmail = random.GetRandomString(7);
         logger.info("created random email id for testing: " + randomEmail + "@website.com");
 
         logger.info("Enter and submit the email address in the shoe store notification form");
-        MainPage.EnterEmailAddress(randomEmail + "@shoestoretesting.com");
+        driver.findElement(By.id("remind_email_input")).sendKeys("test@abc.com");
 
         //click remind email button
         logger.info("Click the submit query button");
-        MainPage.ClickRemindEmail();
+        driver.findElement(By.id("remind_email_submit")).click();
 
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 
-        logger.info("Verify the user has been notified of successful email submission");
-        MainPage.VerifyEmailConfirmation(randomEmail);
 
-        //driver.quit();
+        logger.info("Verify the user has been notified of successful email submission");
+
+        Assert.assertTrue(driver.findElement(By.xpath(".//*[@id='flash']/div"))
+                .getText()
+                .equals("Thanks! We will notify you of our new shoes at this email: test@abc.com"));
+
+        driver.quit();
 
     }
 }
