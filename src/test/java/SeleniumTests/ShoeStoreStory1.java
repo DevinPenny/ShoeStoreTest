@@ -21,12 +21,6 @@ import NavigationObjects.NavigationObjects;
 import PageObjects.PageObjects;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import java.util.Iterator;
-import java.util.List;
-
 
 public class ShoeStoreStory1 extends CommonFunctions {
 
@@ -35,6 +29,8 @@ public class ShoeStoreStory1 extends CommonFunctions {
 
     @Test
     public void VerifyMonthlyDisplay() {
+
+        int shoeCount;
 
         logger.info("Maximize browser window for test reliability");
         driver.manage().window().maximize();
@@ -46,38 +42,32 @@ public class ShoeStoreStory1 extends CommonFunctions {
         logger.info("Verify page tittle to prove application page loaded");
         MainPage.VerifyPageTitle();
 
-        //this for loop needs to go into the page objects after it is working
         for(int month=1; month<12; month++){
 
             logger.info("navigate to month " + month);
-            driver.findElement(By.xpath(".nav > li:nth-child(1) > a:nth-child(" + month + ")")).click();
+            MainPage.ClickMonthbyNumber(month);
 
-            //determine number of shoes for the month, here are a few possible ways to do it
+            //count the number of shoes for the selected month
+            shoeCount = MainPage.GetShoeCount();
+            logger.info("shoe count is ");
+            for(int i=1; i<shoeCount+1; i++) {
 
-            List<WebElement> shoeCount = driver.findElements(By.xpath("[@id='shoe_list']//li"));
+                logger.info("verify the blurb for shoe " + i + " of " + shoeCount);
+                String shoeBlurb = MainPage.GetshoeBlurb(i);
+                logger.info(shoeBlurb);
 
-            WebElement table_element = driver.findElement(By.id("shoe_list"));
-            //List<WebElement> shoeList =table_element.findElements(By.xpath("id('shoe_list')ul/tbody/tr"));
-            List<WebElement> shoeList = table_element.findElements(By.cssSelector(".shoe_result"));
-
-
-            Iterator<WebElement> itr = shoeList.iterator();
-            while(itr.hasNext()) {
-                int i = 1; i++;
-
-                logger.info("verify the blurb for shoe");
-                String shoeBlurb = driver.findElement(By.cssSelector(".shoe_result_value:nth-of-type(" + i + ").shoe_description")).getText();
+                //put the asserts into a try catch or something so the test continues when there is a failure
                 Assert.assertFalse(shoeBlurb.isEmpty());
 
-                logger.info("verify the image of the shoe");
-                //find the image and verify isPresent();
-                WebElement shoeImage = driver.findElement(By.cssSelector("selector"));
-                Assert.assertTrue(shoeImage.isDisplayed());
+                //find the image and verify isDisplayed() this may not be the best way;
+                logger.info("verify the image of the shoe " + i + " of " + shoeCount);
+                boolean imagePresent = MainPage.CheckshoeImage(i);
+                Assert.assertTrue(imagePresent);
 
-                logger.info("verify the pricing of the shoe");
-                String shoePrice = driver.findElement(By.cssSelector(".shoe_result_value:nth-of-type(" + i + ").shoe_price")).getText();
+                logger.info("verify the pricing of the shoe " + i + " of " + shoeCount);
+                String shoePrice = MainPage.GetShoePrice(i);
+                logger.info(shoePrice);
                 Assert.assertFalse(shoePrice.isEmpty());
-
             }
         }
     }

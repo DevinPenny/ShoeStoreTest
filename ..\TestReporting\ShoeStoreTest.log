@@ -1,21 +1,152 @@
-Jan 05, 2017 8:58:07 PM CommonComponents.CommonFunctions WebDriverSetup
+Jan 05, 2017 11:46:54 PM CommonComponents.CommonFunctions WebDriverSetup
 INFO: executing tests with Firefox browser
-Jan 05, 2017 8:58:10 PM CommonComponents.CommonFunctions WebDriverSetup
+Jan 05, 2017 11:46:57 PM CommonComponents.CommonFunctions WebDriverSetup
 INFO: Test preparations complete!
-Jan 05, 2017 8:58:10 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+Jan 05, 2017 11:46:57 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
 INFO: Maximize browser window for test reliability
-Jan 05, 2017 8:58:10 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+Jan 05, 2017 11:46:57 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
 INFO: navigate to page for first test
-Jan 05, 2017 8:58:12 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+Jan 05, 2017 11:46:59 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
 INFO: navigate to month 1
-Jan 05, 2017 8:58:12 PM CommonComponents.CommonFunctions WebDriverShutDown
+Jan 05, 2017 11:47:00 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: Shoe count: 5
+Jan 05, 2017 11:47:00 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe1 of 5
+Jan 05, 2017 11:47:00 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe1
+Jan 05, 2017 11:47:00 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe2 of 5
+Jan 05, 2017 11:47:00 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe2
+Jan 05, 2017 11:47:00 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe3 of 5
+Jan 05, 2017 11:47:00 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe3
+Jan 05, 2017 11:47:00 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe4 of 5
+Jan 05, 2017 11:47:00 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe4
+Jan 05, 2017 11:47:00 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe5 of 5
+Jan 05, 2017 11:47:00 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe5
+Jan 05, 2017 11:47:00 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: navigate to month 2
+Jan 05, 2017 11:47:01 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: Shoe count: 2
+Jan 05, 2017 11:47:01 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe1 of 2
+Jan 05, 2017 11:47:01 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe1
+Jan 05, 2017 11:47:01 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe2 of 2
+Jan 05, 2017 11:47:01 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe2
+Jan 05, 2017 11:47:01 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: navigate to month 3
+Jan 05, 2017 11:47:02 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: Shoe count: 2
+Jan 05, 2017 11:47:02 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe1 of 2
+Jan 05, 2017 11:47:03 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe1
+Jan 05, 2017 11:47:03 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe2 of 2
+Jan 05, 2017 11:47:03 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe2
+Jan 05, 2017 11:47:03 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: navigate to month 4
+Jan 05, 2017 11:47:04 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: Shoe count: 2
+Jan 05, 2017 11:47:04 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe1 of 2
+Jan 05, 2017 11:47:04 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe1
+Jan 05, 2017 11:47:04 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe2 of 2
+Jan 05, 2017 11:47:04 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe2
+Jan 05, 2017 11:47:04 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: navigate to month 5
+Jan 05, 2017 11:47:05 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: Shoe count: 2
+Jan 05, 2017 11:47:05 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe1 of 2
+Jan 05, 2017 11:47:05 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe1
+Jan 05, 2017 11:47:05 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe2 of 2
+Jan 05, 2017 11:47:05 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe2
+Jan 05, 2017 11:47:05 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: navigate to month 6
+Jan 05, 2017 11:47:06 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: Shoe count: 2
+Jan 05, 2017 11:47:06 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe1 of 2
+Jan 05, 2017 11:47:06 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe1
+Jan 05, 2017 11:47:06 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe2 of 2
+Jan 05, 2017 11:47:06 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe2
+Jan 05, 2017 11:47:06 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: navigate to month 7
+Jan 05, 2017 11:47:07 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: Shoe count: 2
+Jan 05, 2017 11:47:07 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe1 of 2
+Jan 05, 2017 11:47:07 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe1
+Jan 05, 2017 11:47:07 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe2 of 2
+Jan 05, 2017 11:47:07 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe2
+Jan 05, 2017 11:47:07 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: navigate to month 8
+Jan 05, 2017 11:47:09 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: Shoe count: 2
+Jan 05, 2017 11:47:09 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe1 of 2
+Jan 05, 2017 11:47:09 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe1
+Jan 05, 2017 11:47:09 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe2 of 2
+Jan 05, 2017 11:47:09 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe2
+Jan 05, 2017 11:47:09 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: navigate to month 9
+Jan 05, 2017 11:47:10 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: Shoe count: 2
+Jan 05, 2017 11:47:10 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe1 of 2
+Jan 05, 2017 11:47:10 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe1
+Jan 05, 2017 11:47:10 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe2 of 2
+Jan 05, 2017 11:47:10 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe2
+Jan 05, 2017 11:47:10 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: navigate to month 10
+Jan 05, 2017 11:47:11 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: Shoe count: 2
+Jan 05, 2017 11:47:11 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe1 of 2
+Jan 05, 2017 11:47:11 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe1
+Jan 05, 2017 11:47:11 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe2 of 2
+Jan 05, 2017 11:47:11 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the pricing of the shoe2
+Jan 05, 2017 11:47:11 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: navigate to month 11
+Jan 05, 2017 11:47:12 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: Shoe count: 2
+Jan 05, 2017 11:47:12 PM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+INFO: verify the blurb for shoe1 of 2
+Jan 05, 2017 11:47:12 PM CommonComponents.CommonFunctions WebDriverShutDown
 INFO: Test Clean up complete
-Jan 05, 2017 8:58:12 PM CommonComponents.CommonFunctions$1 failed
+Jan 05, 2017 11:47:12 PM CommonComponents.CommonFunctions$1 failed
 SEVERE: Test: SeleniumTests.ShoeStoreStory1Sandbox Failed to execute When attempting method VerifyMonthlyDisplay
-Jan 05, 2017 8:58:12 PM CommonComponents.CommonFunctions$1 failed
-SEVERE: Stacktrace: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'Users-MacBook-Pro.local', ip: '192.168.1.3', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.2', java.version: '1.8.0_73'
-Driver info: driver.version: RemoteWebDriver
-Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], profile=UEsDBBQACAgIAEOnJUoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQM6zAyIvdF4ixSbjadQhq87UXtRpTwwx+uBN3NjtyE9u4mIjc1WDVn+Ii4+I4xBhJwU04p6JEKH6nMxvfr0an02th/SKMQZyAfbE9Iy7Djzy83e5PTdXN9NTpSg2Gl1FrlErekg9nrH9KOu24F+6Ot+TTm5nQ0zi3ZqJRBGXdGk/zMkqQHHJa+Br7/1gvW1//L6cUaYEDJFzGYmweTS/L/LsjJVlV4OW1xW+/d6qcv4GrUR27WQKrFPy6oO6sS023Mdb/wfaaNjI5AG98KOiIu0Szo4wGi3yqTVE4mNC+TMLrPre1X6aPsVYLdl/ANQSwcIy87bUaYDAAC2DAAAUEsBAhQAFAAICAgAQ6clSsvO21GmAwAAtgwAAAcAAAAAAAAAAAAAAAAAAAAAAHVzZXIuanNQSwUGAAAAAAEAAQA1AAAA2wMAAAAA}, appBuildId=20161208153507, version=, platform=MAC, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=59908, browserVersion=50.1.0, platformVersion=15.2.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=darwin}]
-Session ID: 304103bf-6b5c-9a45-9274-65fee680d6df
+Jan 05, 2017 11:47:12 PM CommonComponents.CommonFunctions$1 failed
+SEVERE: Stacktrace: java.lang.AssertionError

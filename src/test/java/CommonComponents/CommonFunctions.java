@@ -50,7 +50,7 @@ public class CommonFunctions {
             logger.severe("Test: " + description.getClassName() + " Failed to execute When attempting method " + description.getMethodName());
             logger.severe("Stacktrace: " + t );
             //report error to test management tool here, this could be a web service call to rally or quality center or simply write to a test execution report
-            driver.close();
+
         }
     };
 
@@ -130,6 +130,7 @@ public class CommonFunctions {
     public void WebDriverShutDown(){
 
         driver.close();
+        driver.quit();
         logger.info("Test Clean up complete");
     }
 }

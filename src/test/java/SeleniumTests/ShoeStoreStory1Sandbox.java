@@ -23,9 +23,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
-import java.util.Iterator;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
@@ -43,41 +40,46 @@ public class ShoeStoreStory1Sandbox extends CommonFunctions {
         logger.info("navigate to page for first test");
         driver.get(testProperties.get("ApplicationURI"));
 
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         //this for loop needs to go into the page objects after it is working
-        for(int month=1; month<12; month++){
+        for(int month=1; month<13; month++){
 
             logger.info("navigate to month " + month);
-            driver.findElement(By.xpath(".nav > li:nth-child(1) > a:nth-child(" + month + ")")).click();
+
+            driver.findElement(By.xpath(".//*[@id='header_nav']/nav/ul/li[" + month +"]/a")).click();
+
+            try{
+                Thread.sleep(1000);
+            }
+            catch(InterruptedException ie){
+                logger.severe("I HAVE INSOMNIA");
+            }
 
             //determine number of shoes for the month, here are a few possible ways to do it
-/*
-            List<WebElement> shoeCount = driver.findElements(By.xpath("[@id='shoe_list']//li"));
+            int shoeCount = driver.findElements(By.xpath(".//*[@id='shoe_list']/li")).size();
 
-            WebElement table_element = driver.findElement(By.id("shoe_list"));
-            //List<WebElement> shoeList =table_element.findElements(By.xpath("id('shoe_list')ul/tbody/tr"));
-            List<WebElement> shoeList = table_element.findElements(By.cssSelector(".shoe_result"));
+            logger.info("Shoe count: " + shoeCount);
 
+            for(int i=1; i<shoeCount+1; i++) {
 
-            Iterator<WebElement> itr = shoeList.iterator();
-            while(itr.hasNext()) {
-                int i = 1; i++;
+                logger.info("verify the blurb for shoe" + i + " of " + shoeCount);
+                String shoeBlurb = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i +"]/div/table/tbody/tr[3]/td[2]")).getText();
 
-                logger.info("verify the blurb for shoe");
-                String shoeBlurb = driver.findElement(By.cssSelector(".shoe_result_value:nth-of-type(" + i + ").shoe_description")).getText();
-                Assert.assertFalse(shoeBlurb.isEmpty());
+                System.out.println(shoeBlurb);
+                //Assert.assertFalse(shoeBlurb.isEmpty());
 
-                logger.info("verify the image of the shoe");
-                //find the image and verify isPresent();
-                WebElement shoeImage = driver.findElement(By.cssSelector("selector"));
-                Assert.assertTrue(shoeImage.isDisplayed());
+                //logger.info("verify the image of the shoe");
+                //find the image and verify isDisplayed();
+                WebElement shoeImage = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i +"]/div/table/tbody/tr[6]/td/img"));
 
-                logger.info("verify the pricing of the shoe");
-                String shoePrice = driver.findElement(By.cssSelector(".shoe_result_value:nth-of-type(" + i + ").shoe_price")).getText();
-                Assert.assertFalse(shoePrice.isEmpty());
+                //Assert.assertTrue(shoeImage.isDisplayed());
 
-            }*/
+                logger.info("verify the pricing of the shoe" + i);
+                String shoePrice = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i +"]/div/table/tbody/tr[4]/td[2]")).getText();
+                System.out.println(shoePrice);
+                //Assert.assertFalse(shoePrice.isEmpty());
+            }
         }
     }
 }
