@@ -16,9 +16,10 @@ package SeleniumTests;
  *      Each shoe should have a suggested price pricing
  */
 
-import CommonComponents.CommonFunctions;
+import CommonComponents.CommonComponents;
 import NavigationObjects.NavigationObjects;
 import PageObjects.PageObjects;
+import com.relevantcodes.extentreports.ExtentTest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -26,10 +27,13 @@ import org.openqa.selenium.WebElement;
 import java.util.concurrent.TimeUnit;
 
 
-public class ShoeStoreStory1Sandbox extends CommonFunctions {
+public class ShoeStoreStory1Sandbox extends CommonComponents.CommonComponents {
 
     PageObjects MainPage = new PageObjects(driver);
     NavigationObjects navigation = new NavigationObjects();
+
+
+
 
     @Test
     public void VerifyMonthlyDisplay() {
@@ -63,6 +67,10 @@ public class ShoeStoreStory1Sandbox extends CommonFunctions {
 
             for(int i=1; i<shoeCount+1; i++) {
 
+                ExtentTest test = extent
+                        .startTest("Verify Monthly Display for month " + month, "Sample description")
+                        .assignCategory("Functional", "End To End");
+
                 logger.info("verify the blurb for shoe" + i + " of " + shoeCount);
                 String shoeBlurb = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i + "]/div/table/tbody/tr[3]/td[2]")).getText();
                 logger.info(shoeBlurb);
@@ -95,8 +103,10 @@ public class ShoeStoreStory1Sandbox extends CommonFunctions {
                     logger.severe("Shoe listing " + shoeCount + "is missing price!");
                 }
 
+                extent.endTest(test);
 
             }
+            extent.flush();
         }
     }
 }

@@ -16,13 +16,13 @@ package SeleniumTests;
  *      Each shoe should have a suggested price pricing
  */
 
-import CommonComponents.CommonFunctions;
+import CommonComponents.CommonComponents;
 import NavigationObjects.NavigationObjects;
 import PageObjects.PageObjects;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ShoeStoreStory1 extends CommonFunctions {
+public class ShoeStoreStory1 extends CommonComponents.CommonComponents {
 
     PageObjects MainPage = new PageObjects(driver);
     NavigationObjects navigation = new NavigationObjects();

@@ -16,7 +16,7 @@ package SeleniumTests;
  *
  */
 
-import CommonComponents.CommonFunctions;
+import CommonComponents.CommonComponents;
 import NavigationObjects.NavigationObjects;
 import PageObjects.PageObjects;
 import TestDataManagement.RandomDataGenerator;
@@ -25,7 +25,7 @@ import org.junit.*;
 import java.util.concurrent.TimeUnit;
 
 
-public class ShoeStoreStory2 extends CommonFunctions {
+public class ShoeStoreStory2 extends CommonComponents.CommonComponents {
 
     PageObjects MainPage = new PageObjects(driver);
     NavigationObjects navigation = new NavigationObjects();

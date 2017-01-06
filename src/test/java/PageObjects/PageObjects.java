@@ -3,14 +3,14 @@
  */
 package PageObjects;
 
-import CommonComponents.CommonFunctions;
+import CommonComponents.CommonComponents;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 
-public class PageObjects extends CommonFunctions {
+public class PageObjects extends CommonComponents.CommonComponents {
 
     WebDriver driver;
 
@@ -40,7 +40,6 @@ public class PageObjects extends CommonFunctions {
 
 
     public void VerifyEmailFailure() {
-
 
         Assert.assertTrue(driver.findElement(By.xpath(GetSuccessFailSelector))
                 .getText()

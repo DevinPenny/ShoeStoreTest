@@ -5,6 +5,7 @@ package CommonComponents;
 
 import TestDataManagement.ExcelDataManager;
 import TestDataManagement.PropertiesManager;
+import com.relevantcodes.extentreports.ExtentReports;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -22,13 +23,15 @@ import java.util.HashMap;
 import java.util.logging.*;
 
 
-public class CommonFunctions {
+public class CommonComponents {
 
     protected WebDriver driver;
 
-    public Logger logger = Logger.getLogger(CommonFunctions.class.getName());
+    public Logger logger = Logger.getLogger(CommonComponents.CommonComponents.class.getName());
     public Handler fileHandler = null;
     public Formatter formatter = null;
+    public ExtentReports extent = null;
+
 
     ExcelDataManager queryExcel;
     public String LogFilePath = "..\\TestReporting\\ShoeStoreTest.log";
@@ -83,6 +86,16 @@ public class CommonFunctions {
             logger.severe("Caught queryExcel Exception: " + e);
         }
         */
+
+
+        try {
+             ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), true);
+
+        }catch (Exception e) {
+            logger.severe("Could instantiate extent reports");
+        }
+
+
 
         //configure the logger to use file handler and formatter
         fileHandler.setLevel(Level.ALL);
