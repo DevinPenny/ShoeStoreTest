@@ -3,14 +3,14 @@
  */
 package PageObjects;
 
-import CommonComponents.CommonComponents;
+import CommonComponents.CommonObjects;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 
-public class PageObjects extends CommonComponents.CommonComponents {
+public class PageObjects extends CommonObjects {
 
     WebDriver driver;
 

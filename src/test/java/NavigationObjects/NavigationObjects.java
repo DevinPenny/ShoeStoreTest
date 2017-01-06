@@ -4,10 +4,10 @@
 
 package NavigationObjects;
 
-import CommonComponents.CommonComponents;
+import CommonComponents.CommonObjects;
 import org.openqa.selenium.WebDriver;
 
-public class NavigationObjects extends CommonComponents.CommonComponents {
+public class NavigationObjects extends CommonObjects {
 
     WebDriver driver;
 

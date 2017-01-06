@@ -1,18 +1,18 @@
-Jan 06, 2017 1:31:39 AM CommonComponents.CommonFunctions WebDriverSetup
+Jan 06, 2017 1:43:17 AM CommonComponents.CommonObjects WebDriverSetup
 INFO: executing tests with Firefox browser
-Jan 06, 2017 1:31:42 AM CommonComponents.CommonFunctions WebDriverSetup
+Jan 06, 2017 1:43:20 AM CommonComponents.CommonObjects WebDriverSetup
 INFO: Test preparations complete!
-Jan 06, 2017 1:31:42 AM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+Jan 06, 2017 1:43:20 AM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
 INFO: Maximize browser window for test reliability
-Jan 06, 2017 1:31:43 AM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+Jan 06, 2017 1:43:20 AM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
 INFO: navigate to page for first test
-Jan 06, 2017 1:31:44 AM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+Jan 06, 2017 1:43:21 AM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
 INFO: navigate to month 1
-Jan 06, 2017 1:31:45 AM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
+Jan 06, 2017 1:43:22 AM SeleniumTests.ShoeStoreStory1Sandbox VerifyMonthlyDisplay
 INFO: Shoe count: 5
-Jan 06, 2017 1:31:45 AM CommonComponents.CommonFunctions WebDriverShutDown
+Jan 06, 2017 1:43:22 AM CommonComponents.CommonObjects WebDriverShutDown
 INFO: Test Clean up complete
-Jan 06, 2017 1:31:45 AM CommonComponents.CommonFunctions$1 failed
+Jan 06, 2017 1:43:23 AM CommonComponents.CommonObjects$1 failed
 SEVERE: Test: SeleniumTests.ShoeStoreStory1Sandbox Failed to execute When attempting method VerifyMonthlyDisplay
-Jan 06, 2017 1:31:45 AM CommonComponents.CommonFunctions$1 failed
+Jan 06, 2017 1:43:23 AM CommonComponents.CommonObjects$1 failed
 SEVERE: Stacktrace: java.lang.NullPointerException

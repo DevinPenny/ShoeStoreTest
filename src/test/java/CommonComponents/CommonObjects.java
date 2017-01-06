@@ -23,11 +23,11 @@ import java.util.HashMap;
 import java.util.logging.*;
 
 
-public class CommonComponents {
+public class CommonObjects {
 
     protected WebDriver driver;
 
-    public Logger logger = Logger.getLogger(CommonComponents.CommonComponents.class.getName());
+    public Logger logger = Logger.getLogger(CommonObjects.class.getName());
     public Handler fileHandler = null;
     public Formatter formatter = null;
     public ExtentReports extent = null;
@@ -94,7 +94,6 @@ public class CommonComponents {
         }catch (Exception e) {
             logger.severe("Could instantiate extent reports");
         }
-
 
 
         //configure the logger to use file handler and formatter

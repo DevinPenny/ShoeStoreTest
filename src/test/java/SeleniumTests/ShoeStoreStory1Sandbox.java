@@ -16,9 +16,10 @@ package SeleniumTests;
  *      Each shoe should have a suggested price pricing
  */
 
-import CommonComponents.CommonComponents;
+import CommonComponents.CommonObjects;
 import NavigationObjects.NavigationObjects;
 import PageObjects.PageObjects;
+import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import org.junit.Assert;
 import org.junit.Test;
@@ -27,11 +28,11 @@ import org.openqa.selenium.WebElement;
 import java.util.concurrent.TimeUnit;
 
 
-public class ShoeStoreStory1Sandbox extends CommonComponents.CommonComponents {
+public class ShoeStoreStory1Sandbox extends CommonObjects {
 
     PageObjects MainPage = new PageObjects(driver);
     NavigationObjects navigation = new NavigationObjects();
-
+    public ExtentReports extent = null;
 
 
 
@@ -67,9 +68,16 @@ public class ShoeStoreStory1Sandbox extends CommonComponents.CommonComponents {
 
             for(int i=1; i<shoeCount+1; i++) {
 
-                ExtentTest test = extent
-                        .startTest("Verify Monthly Display for month " + month, "Sample description")
-                        .assignCategory("Functional", "End To End");
+
+                try{
+                ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), true);
+
+                } catch (Exception e) {
+                    logger.severe("could not create extent report");
+                }
+
+                ExtentTest test = extent.startTest("Verify shoe list for month " + month, "Sample description");
+
 
                 logger.info("verify the blurb for shoe" + i + " of " + shoeCount);
                 String shoeBlurb = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i + "]/div/table/tbody/tr[3]/td[2]")).getText();
