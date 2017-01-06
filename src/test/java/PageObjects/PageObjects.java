@@ -32,10 +32,16 @@ public class PageObjects extends CommonFunctions {
     }
 
     public void VerifyEmailConfirmation(String emailAddress) {
-
         Assert.assertTrue(driver.findElement(By.xpath(GetTextFromPageSelector))
                 .getText()
                 .equals("Thanks! We will notify you of our new shoes at this email: " + emailAddress + "@shoestoretesting.com"));
+    }
+
+
+    public void VerifyEmailFailure() {
+        Assert.assertTrue(driver.findElement(By.xpath(GetTextFromPageSelector))
+                .getText()
+                .equals("Invalid email format. Ex. name@example.com"));
     }
 
     public void VerifyPageTitle() {

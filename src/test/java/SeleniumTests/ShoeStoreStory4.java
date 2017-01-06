@@ -4,7 +4,7 @@ package SeleniumTests;
  * Created by Devin Penny on 1/4/17.
  *
  *
- *  Story 2: Submit email for reminder
+ *  Story 2: Submit email for reminder - Negative test with invalid email address
  *
  *  In order to be reminded of upcoming shoe releases As a user of the Shoe Store I want to be able to submit my email address
  *
@@ -24,15 +24,14 @@ import org.junit.*;
 
 import java.util.concurrent.TimeUnit;
 
-
-public class ShoeStoreStory2 extends CommonFunctions {
+public class ShoeStoreStory4 extends CommonFunctions {
 
     PageObjects MainPage = new PageObjects(driver);
     NavigationObjects navigation = new NavigationObjects();
     RandomDataGenerator random = new RandomDataGenerator();
 
     @Test
-    public void VerifyEmailNotifications() {
+    public void VerifyEmailNotificationsFailure() {
 
         logger.info("Maximize browser window for test reliability");
         driver.manage().window().maximize();
@@ -47,7 +46,7 @@ public class ShoeStoreStory2 extends CommonFunctions {
         logger.info("created random email id for testing: " + randomEmail + "@website.com");
 
         logger.info("Enter and submit the email address in the shoe store notification form");
-        MainPage.EnterEmailAddress(randomEmail + "@shoestoretesting.com");
+        MainPage.EnterEmailAddress(randomEmail);
 
         //click remind email button
         logger.info("Click the submit query button");
@@ -55,8 +54,8 @@ public class ShoeStoreStory2 extends CommonFunctions {
 
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 
-        logger.info("Verify the user has been notified of successful email submission");
-        MainPage.VerifyEmailConfirmation(randomEmail);
+        logger.info("Verify the user has been notified of an error with the email submission");
+        MainPage.VerifyEmailFailure();
 
         //driver.quit();
 
