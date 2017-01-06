@@ -45,7 +45,7 @@ public class ShoeStoreStory1 extends CommonFunctions {
         for(int month=1; month<12; month++){
 
             logger.info("navigate to month " + month);
-            MainPage.ClickMonthbyNumber(month);
+            MainPage.ClickMonthByNumber(month);
 
             //count the number of shoes for the selected month
             shoeCount = MainPage.GetShoeCount();
@@ -53,7 +53,7 @@ public class ShoeStoreStory1 extends CommonFunctions {
             for(int i=1; i<shoeCount+1; i++) {
 
                 logger.info("verify the blurb for shoe " + i + " of " + shoeCount);
-                String shoeBlurb = MainPage.GetshoeBlurb(i);
+                String shoeBlurb = MainPage.GetShoeBlurb(i);
                 logger.info(shoeBlurb);
 
                 //put the asserts into a try catch or something so the test continues when there is a failure
@@ -61,7 +61,7 @@ public class ShoeStoreStory1 extends CommonFunctions {
 
                 //find the image and verify isDisplayed() this may not be the best way;
                 logger.info("verify the image of the shoe " + i + " of " + shoeCount);
-                boolean imagePresent = MainPage.CheckshoeImage(i);
+                boolean imagePresent = MainPage.CheckShoeImage(i);
                 Assert.assertTrue(imagePresent);
 
                 logger.info("verify the pricing of the shoe " + i + " of " + shoeCount);

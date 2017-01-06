@@ -64,21 +64,38 @@ public class ShoeStoreStory1Sandbox extends CommonFunctions {
             for(int i=1; i<shoeCount+1; i++) {
 
                 logger.info("verify the blurb for shoe" + i + " of " + shoeCount);
-                String shoeBlurb = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i +"]/div/table/tbody/tr[3]/td[2]")).getText();
+                String shoeBlurb = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i + "]/div/table/tbody/tr[3]/td[2]")).getText();
+                logger.info(shoeBlurb);
 
-                System.out.println(shoeBlurb);
-                //Assert.assertFalse(shoeBlurb.isEmpty());
+                try{
+                    Assert.assertFalse(shoeBlurb.isEmpty());
+                }
+                catch(Exception e){
+                    logger.severe("Shoe listing" + shoeCount + "is missing description!" );
+                }
 
-                //logger.info("verify the image of the shoe");
-                //find the image and verify isDisplayed();
-                WebElement shoeImage = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i +"]/div/table/tbody/tr[6]/td/img"));
+                logger.info("verify the image of the shoe" + i + " of " + shoeCount);
+                WebElement shoeImage = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i + "]/div/table/tbody/tr[6]/td/img"));
 
-                //Assert.assertTrue(shoeImage.isDisplayed());
+                try{
+                    Assert.assertTrue(shoeImage.isDisplayed());
+                }
+                catch(Exception e){
+                    logger.severe("Shoe listing" + shoeCount + " is missing image!");
+                }
 
-                logger.info("verify the pricing of the shoe" + i);
-                String shoePrice = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i +"]/div/table/tbody/tr[4]/td[2]")).getText();
+                logger.info("verify the pricing of the shoe" + i + " of " + shoeCount);
+                String shoePrice = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i + "]/div/table/tbody/tr[4]/td[2]")).getText();
                 System.out.println(shoePrice);
-                //Assert.assertFalse(shoePrice.isEmpty());
+
+                try{
+                    Assert.assertFalse(shoePrice.isEmpty());
+                }
+                catch(Exception e){
+                    logger.severe("Shoe listing " + shoeCount + "is missing price!");
+                }
+
+
             }
         }
     }

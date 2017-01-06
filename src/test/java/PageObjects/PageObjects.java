@@ -52,7 +52,7 @@ public class PageObjects extends CommonFunctions {
         Assert.assertTrue(driver.getTitle().equals("Shoe Store: Welcome to the Shoe Store"));
     }
 
-    public void ClickMonthbyNumber(int month) {
+    public void ClickMonthByNumber(int month) {
 
         driver.findElement(By.xpath(".//*[@id='header_nav']/nav/ul/li[" + month +"]/a")).click();
 
@@ -71,13 +71,13 @@ public class PageObjects extends CommonFunctions {
         return shoeCount;
     }
 
-    public String GetshoeBlurb(int shoeNumber){
+    public String GetShoeBlurb(int shoeNumber){
 
         String shoeBlurb = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + shoeNumber +"]/div/table/tbody/tr[3]/td[2]")).getText();
         return shoeBlurb;
     }
 
-    public boolean CheckshoeImage(int shoeNumber){
+    public boolean CheckShoeImage(int shoeNumber){
 
         WebElement shoeImage = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + shoeNumber +"]/div/table/tbody/tr[6]/td/img"));
         return shoeImage.isDisplayed();

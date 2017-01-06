@@ -2,22 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4cc3a90-416b-4b55-a301-cb86c34a5797" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_relevantcodes_extentreports_2_41_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_3_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_8_11_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/CommonComponents/CommonFunctions$1.class" afterPath="$PROJECT_DIR$/target/test-classes/CommonComponents/CommonFunctions$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/CommonComponents/CommonFunctions.class" afterPath="$PROJECT_DIR$/target/test-classes/CommonComponents/CommonFunctions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/PageObjects.class" afterPath="$PROJECT_DIR$/target/test-classes/PageObjects/PageObjects.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/SeleniumTests/ShoeStoreStory1Sandbox.class" afterPath="$PROJECT_DIR$/target/test-classes/SeleniumTests/ShoeStoreStory1Sandbox.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/..\TestReporting\ShoeStoreTest.log" afterPath="$PROJECT_DIR$/..\TestReporting\ShoeStoreTest.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShoeStoreTest.iml" afterPath="$PROJECT_DIR$/ShoeStoreTest.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CommonComponents/CommonFunctions.java" afterPath="$PROJECT_DIR$/src/test/java/CommonComponents/CommonFunctions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1.java" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1Sandbox.java" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1Sandbox.java" />
@@ -43,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ShoeStoreStory1Sandbox.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShoeStoreStory1Sandbox.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1Sandbox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.5920502">
+              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PageObjects.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PageObjects.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49790794">
-              <caret line="81" column="84" selection-start-line="81" selection-start-column="84" selection-end-line="81" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -125,9 +109,9 @@
         <option value="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory2Sandbox.java" />
         <option value="$PROJECT_DIR$/src/test/java/CommonComponents/CommonFunctions.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1Sandbox.java" />
-        <option value="$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java" />
         <option value="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1.java" />
+        <option value="$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1Sandbox.java" />
       </list>
     </option>
   </component>
@@ -1123,17 +1107,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1Sandbox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1142,10 +1116,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PageObjects/PageObjects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49790794">
-          <caret line="81" column="84" selection-start-line="81" selection-start-column="84" selection-end-line="81" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumTests/ShoeStoreStory1Sandbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5920502">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
