@@ -24,7 +24,7 @@ import org.junit.*;
 
 import java.util.concurrent.TimeUnit;
 
-public class ShoeStoreStory4 extends CommonFunctions {
+public class ShoeStoreStory2Negative extends CommonFunctions {
 
     PageObjects MainPage = new PageObjects(driver);
     NavigationObjects navigation = new NavigationObjects();

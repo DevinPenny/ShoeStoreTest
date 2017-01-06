@@ -5,13 +5,12 @@
 package TestRunner;
 
 
-import SeleniumTests.ShoeStoreStory1;
-import SeleniumTests.ShoeStoreStory2;
-import SeleniumTests.ShoeStoreStory3;
+import SeleniumTests.ShoeStoreStory1Sandbox;
+import SeleniumTests.ShoeStoreStory2Sandbox;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({ShoeStoreStory3.class})
+@Suite.SuiteClasses({ShoeStoreStory1Sandbox.class})
 
 public class TestRunner {}

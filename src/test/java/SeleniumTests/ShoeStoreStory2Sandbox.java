@@ -26,7 +26,7 @@ import org.openqa.selenium.By;
 import java.util.concurrent.TimeUnit;
 
 
-public class ShoeStoreStory3 extends CommonFunctions {
+public class ShoeStoreStory2Sandbox extends CommonFunctions {
 
     PageObjects MainPage = new PageObjects(driver);
     NavigationObjects navigation = new NavigationObjects();
@@ -63,7 +63,7 @@ public class ShoeStoreStory3 extends CommonFunctions {
                 .getText()
                 .equals("Thanks! We will notify you of our new shoes at this email: test@abc.com"));
 
-        driver.quit();
+        //driver.quit();
 
     }
 }
