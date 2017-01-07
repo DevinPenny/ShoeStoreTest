@@ -25,8 +25,6 @@ import org.openqa.selenium.WebDriver;
 
 public class ShoeStoreStory1 extends CommonObjects {
 
-    protected WebDriver driver;
-
     public ShoeStoreStory1(WebDriver driver){
         super(driver);
     }

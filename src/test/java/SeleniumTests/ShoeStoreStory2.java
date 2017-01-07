@@ -28,16 +28,14 @@ import java.util.concurrent.TimeUnit;
 
 public class ShoeStoreStory2 extends CommonObjects {
 
-    WebDriver driver;
+    public ShoeStoreStory2(WebDriver driver){
+        super(driver);
+    }
 
     PageObjects MainPage = new PageObjects(driver);
     NavigationObjects navigation = new NavigationObjects(driver);
     RandomDataGenerator random = new RandomDataGenerator();
 
-
-    public ShoeStoreStory2(WebDriver driver){
-        super(driver);
-    }
 
     @Test
     public void VerifyEmailNotifications() {
