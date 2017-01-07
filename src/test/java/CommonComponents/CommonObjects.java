@@ -3,7 +3,6 @@
  */
 package CommonComponents;
 
-import TestDataManagement.ExcelDataManager;
 import TestDataManagement.PropertiesManager;
 import com.relevantcodes.extentreports.ExtentReports;
 import org.junit.After;
@@ -27,25 +26,23 @@ public class CommonObjects {
 
     protected WebDriver driver;
 
+    //constructor for web driver
+    public CommonObjects(WebDriver driver){
+        this.driver = driver;
+    }
+
     public Logger logger = Logger.getLogger(CommonObjects.class.getName());
     public Handler fileHandler = null;
     public Formatter formatter = null;
     public ExtentReports extent = null;
 
-
-    ExcelDataManager queryExcel;
     public String LogFilePath = "..\\TestReporting\\ShoeStoreTest.log";
-
-    public String excelQuery = "SELECT Test_name from Sheet2 where Execute_test = 'Y'";
-
-    public HashMap<Integer,HashMap<String,String>> QueryData;
 
     PropertiesManager getProperties;
     public HashMap<String,String> testProperties;
 
 
     //use method overriding to provide control over how failures are handled
-
     @Rule
     public TestWatcher listen = new TestWatcher() {
         @Override
@@ -61,7 +58,17 @@ public class CommonObjects {
     @Before
     public void WebDriverSetup() {
 
-        //set up file handler to store log messages
+        //set up all common components that are to be shared between tests
+
+        //get the properties from the properties file, the return is a hash map of all properties
+        try {
+            getProperties = new TestDataManagement.PropertiesManager();
+            testProperties = getProperties.GetPropertiesData();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        //set up file handler for the logger object
         try {
             fileHandler = new FileHandler(LogFilePath);
         }catch (IOException e){
@@ -75,41 +82,21 @@ public class CommonObjects {
             logger.severe("Caught formatter Exception: " + e);
         }
 
-        //query excel as a database, this is a powerful way to use SQL against an excel document
-        //This is not needed for the shoe store test example but I think it is cool and want to show it off
+        //configure the logger to use file handler and formatter
+        fileHandler.setLevel(Level.ALL);
+        fileHandler.setFormatter(formatter);
+        logger.addHandler(fileHandler);
 
-        /*
+        //set up the test reporter using extent reports
         try {
-            queryExcel = new ExcelDataManager();
-            QueryData = queryExcel.queryExcel(excelPath, excelQuery);
-        }catch (Exception e){
-            logger.severe("Caught queryExcel Exception: " + e);
-        }
-        */
-
-
-        try {
-             ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), true);
+            ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), true);
 
         }catch (Exception e) {
             logger.severe("Could instantiate extent reports");
         }
 
 
-        //configure the logger to use file handler and formatter
-        fileHandler.setLevel(Level.ALL);
-        fileHandler.setFormatter(formatter);
-        logger.addHandler(fileHandler);
-
-        //get the properties from the properties file, the return is a hash map of all properties
-        try {
-            getProperties = new TestDataManagement.PropertiesManager();
-            testProperties = getProperties.GetPropertiesData();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        //the browser is determined from the TestBrowser value in the properties file
+        //instantiate the web driver based on the the TestBrowser value in the properties file
         try {
             switch (testProperties.get("TestBrowser")){
                 case "firefox":

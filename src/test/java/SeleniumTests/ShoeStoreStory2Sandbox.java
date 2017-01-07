@@ -17,20 +17,20 @@ package SeleniumTests;
  */
 
 import CommonComponents.CommonObjects;
-import NavigationObjects.NavigationObjects;
-import PageObjects.PageObjects;
 import TestDataManagement.RandomDataGenerator;
 import org.junit.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
 
-
 public class ShoeStoreStory2Sandbox extends CommonObjects {
 
-    PageObjects MainPage = new PageObjects(driver);
-    NavigationObjects navigation = new NavigationObjects();
     RandomDataGenerator random = new RandomDataGenerator();
+
+    public ShoeStoreStory2Sandbox(WebDriver driver){
+        super(driver);
+    }
 
     @Test
     public void VerifyEmailNotifications() {
@@ -56,14 +56,10 @@ public class ShoeStoreStory2Sandbox extends CommonObjects {
 
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 
-
         logger.info("Verify the user has been notified of successful email submission");
 
         Assert.assertTrue(driver.findElement(By.xpath(".//*[@id='flash']/div"))
                 .getText()
                 .equals("Thanks! We will notify you of our new shoes at this email: test@abc.com"));
-
-        //driver.quit();
-
     }
 }

@@ -24,17 +24,18 @@ import com.relevantcodes.extentreports.ExtentTest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import java.util.concurrent.TimeUnit;
 
 
 public class ShoeStoreStory1Sandbox extends CommonObjects {
 
-    PageObjects MainPage = new PageObjects(driver);
-    NavigationObjects navigation = new NavigationObjects();
-    public ExtentReports extent = null;
+    public ExtentReports extent;
 
-
+    public ShoeStoreStory1Sandbox(WebDriver driver){
+        super(driver);
+    }
 
     @Test
     public void VerifyMonthlyDisplay() {
@@ -58,7 +59,7 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
                 Thread.sleep(1000);
             }
             catch(InterruptedException ie){
-                logger.severe("I HAVE INSOMNIA");
+                logger.severe("computer has insomnia and can not sleep");
             }
 
             //determine number of shoes for the month, here are a few possible ways to do it
@@ -70,13 +71,15 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
 
 
                 try{
-                ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), true);
+                    ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), true);
 
                 } catch (Exception e) {
                     logger.severe("could not create extent report");
                 }
 
-                ExtentTest test = extent.startTest("Verify shoe list for month " + month, "Sample description");
+
+
+             //   ExtentTest test = extent.startTest("Verify shoe list for month " + month, "Sample description");
 
 
                 logger.info("verify the blurb for shoe" + i + " of " + shoeCount);
@@ -86,8 +89,8 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
                 try{
                     Assert.assertFalse(shoeBlurb.isEmpty());
                 }
-                catch(Exception e){
-                    logger.severe("Shoe listing" + shoeCount + "is missing description!" );
+                catch(AssertionError e){
+                    logger.severe("Shoe listing " + shoeCount + "is missing description!" );
                 }
 
                 logger.info("verify the image of the shoe" + i + " of " + shoeCount);
@@ -96,25 +99,25 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
                 try{
                     Assert.assertTrue(shoeImage.isDisplayed());
                 }
-                catch(Exception e){
+                catch(AssertionError e){
                     logger.severe("Shoe listing" + shoeCount + " is missing image!");
                 }
 
                 logger.info("verify the pricing of the shoe" + i + " of " + shoeCount);
                 String shoePrice = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i + "]/div/table/tbody/tr[4]/td[2]")).getText();
-                System.out.println(shoePrice);
+                logger.info(shoePrice);
 
                 try{
                     Assert.assertFalse(shoePrice.isEmpty());
                 }
-                catch(Exception e){
+                catch(AssertionError e){
                     logger.severe("Shoe listing " + shoeCount + "is missing price!");
                 }
 
-                extent.endTest(test);
+                //extent.endTest(test);
 
             }
-            extent.flush();
+            //extent.flush();
         }
     }
 }

@@ -7,11 +7,15 @@ package NavigationObjects;
 import CommonComponents.CommonObjects;
 import org.openqa.selenium.WebDriver;
 
+
 public class NavigationObjects extends CommonObjects {
 
-    WebDriver driver;
+    public NavigationObjects(WebDriver driver){
+        super(driver);
+    }
 
-    public void NavigateToPage(){
+    public NavigationObjects NavigateToPage(){
         driver.get(testProperties.get("ApplicationURI"));
+        return new NavigationObjects(driver);
     }
 }

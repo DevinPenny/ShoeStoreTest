@@ -21,15 +21,23 @@ import NavigationObjects.NavigationObjects;
 import PageObjects.PageObjects;
 import TestDataManagement.RandomDataGenerator;
 import org.junit.*;
+import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
 
 
 public class ShoeStoreStory2 extends CommonObjects {
 
+    WebDriver driver;
+
     PageObjects MainPage = new PageObjects(driver);
-    NavigationObjects navigation = new NavigationObjects();
+    NavigationObjects navigation = new NavigationObjects(driver);
     RandomDataGenerator random = new RandomDataGenerator();
+
+
+    public ShoeStoreStory2(WebDriver driver){
+        super(driver);
+    }
 
     @Test
     public void VerifyEmailNotifications() {
@@ -56,9 +64,15 @@ public class ShoeStoreStory2 extends CommonObjects {
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 
         logger.info("Verify the user has been notified of successful email submission");
-        MainPage.VerifyEmailConfirmation(randomEmail);
 
-        //driver.quit();
-
+/*
+        try{
+            Assert.assertTrue(MainPage.GetEmailConfirmation(randomEmail + "@shoestoretesting.com")
+                    .equals("Thanks! We will notify you of our new shoes at this email: " + randomEmail + "@shoestoretesting.com"));
+        }
+        catch(AssertionError e){
+            logger.severe("Email confirmation message incorrect!");
+        }
+        */
     }
 }
