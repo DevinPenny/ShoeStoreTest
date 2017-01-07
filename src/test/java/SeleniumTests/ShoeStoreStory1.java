@@ -49,11 +49,14 @@ public class ShoeStoreStory1 extends CommonObjects {
             logger.info("navigate to month " + month);
             MainPage.ClickMonthByNumber(month);
 
+            //fix this to get the proper shoe count
             //count the number of shoes for the selected month
-            MainPage = MainPage.GetShoeCount();
-            logger.info("shoe count is ");
 
             int shoeCount = 2;
+            //MainPage = MainPage.GetShoeCount();
+            logger.info("shoe count is ");
+
+
 
             for(int i=1; i<shoeCount+1; i++) {
 
