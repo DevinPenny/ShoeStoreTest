@@ -17,7 +17,6 @@ package SeleniumTests;
  */
 
 import CommonComponents.CommonObjects;
-import TestDataManagement.RandomDataGenerator;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,8 +24,6 @@ import org.openqa.selenium.WebDriver;
 import java.util.concurrent.TimeUnit;
 
 public class ShoeStoreStory2Sandbox extends CommonObjects {
-
-    RandomDataGenerator random = new RandomDataGenerator();
 
     public ShoeStoreStory2Sandbox(WebDriver driver){
         super(driver);

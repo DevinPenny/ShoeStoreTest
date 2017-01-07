@@ -17,8 +17,6 @@ package SeleniumTests;
  */
 
 import CommonComponents.CommonObjects;
-import NavigationObjects.NavigationObjects;
-import PageObjects.PageObjects;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -31,9 +29,6 @@ public class ShoeStoreStory1 extends CommonObjects {
 
     @Test
     public void VerifyMonthlyDisplay() {
-
-        PageObjects MainPage = new PageObjects(driver);
-        NavigationObjects navigation = new NavigationObjects(driver);
 
         logger.info("Maximize browser window for test reliability");
         driver.manage().window().maximize();

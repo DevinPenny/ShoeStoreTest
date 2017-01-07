@@ -17,9 +17,6 @@ package SeleniumTests;
  */
 
 import CommonComponents.CommonObjects;
-import NavigationObjects.NavigationObjects;
-import PageObjects.PageObjects;
-import TestDataManagement.RandomDataGenerator;
 import org.junit.*;
 import org.openqa.selenium.WebDriver;
 
@@ -31,11 +28,6 @@ public class ShoeStoreStory2 extends CommonObjects {
     public ShoeStoreStory2(WebDriver driver){
         super(driver);
     }
-
-    PageObjects MainPage = new PageObjects(driver);
-    NavigationObjects navigation = new NavigationObjects(driver);
-    RandomDataGenerator random = new RandomDataGenerator();
-
 
     @Test
     public void VerifyEmailNotifications() {

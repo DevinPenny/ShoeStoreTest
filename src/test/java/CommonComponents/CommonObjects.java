@@ -3,7 +3,10 @@
  */
 package CommonComponents;
 
+import NavigationObjects.NavigationObjects;
+import PageObjects.PageObjects;
 import TestDataManagement.PropertiesManager;
+import TestDataManagement.RandomDataGenerator;
 import com.relevantcodes.extentreports.ExtentReports;
 import org.junit.After;
 import org.junit.Before;
@@ -24,12 +27,16 @@ import java.util.logging.*;
 
 public class CommonObjects {
 
-    protected WebDriver driver;
-
     //constructor for web driver
     public CommonObjects(WebDriver driver){
         this.driver = driver;
     }
+
+    protected WebDriver driver;
+
+    public PageObjects MainPage = new PageObjects(driver);
+    public NavigationObjects navigation = new NavigationObjects(driver);
+    public RandomDataGenerator random = new RandomDataGenerator();
 
     public Logger logger = Logger.getLogger(CommonObjects.class.getName());
     public Handler fileHandler = null;

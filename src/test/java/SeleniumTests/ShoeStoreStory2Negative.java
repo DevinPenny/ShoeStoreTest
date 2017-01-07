@@ -17,12 +17,8 @@ package SeleniumTests;
  */
 
 import CommonComponents.CommonObjects;
-import NavigationObjects.NavigationObjects;
-import PageObjects.PageObjects;
-import TestDataManagement.RandomDataGenerator;
 import org.junit.*;
 import org.openqa.selenium.WebDriver;
-
 import java.util.concurrent.TimeUnit;
 
 public class ShoeStoreStory2Negative extends CommonObjects {
@@ -30,10 +26,6 @@ public class ShoeStoreStory2Negative extends CommonObjects {
     public ShoeStoreStory2Negative(WebDriver driver){
         super(driver);
     }
-
-    PageObjects MainPage = new PageObjects(driver);
-    NavigationObjects navigation = new NavigationObjects(driver);
-    RandomDataGenerator random = new RandomDataGenerator();
 
     @Test
     public void VerifyEmailNotificationsFailure() {
