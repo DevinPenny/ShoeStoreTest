@@ -23,7 +23,6 @@ import com.relevantcodes.extentreports.ExtentTest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import java.util.concurrent.TimeUnit;
 
@@ -31,10 +30,6 @@ import java.util.concurrent.TimeUnit;
 public class ShoeStoreStory1Sandbox extends CommonObjects {
 
     public ExtentReports extent;
-
-    public ShoeStoreStory1Sandbox(WebDriver driver){
-        super(driver);
-    }
 
     @Test
     public void VerifyMonthlyDisplay() {

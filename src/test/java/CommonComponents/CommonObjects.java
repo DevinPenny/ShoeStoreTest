@@ -42,7 +42,6 @@ public class CommonObjects {
     PropertiesManager getProperties;
 
 
-
     //constructor for web driver
     public CommonObjects(WebDriver driver){
         this.driver = driver;

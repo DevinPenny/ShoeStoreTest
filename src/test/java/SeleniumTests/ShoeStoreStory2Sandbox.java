@@ -39,7 +39,8 @@ public class ShoeStoreStory2Sandbox extends CommonObjects {
         logger.info("Verify page tittle to prove application page loaded");
         Assert.assertTrue(driver.getTitle().equals("Shoe Store: Welcome to the Shoe Store"));
 
-        String randomEmail = random.GetRandomString(7);
+        //String randomEmail = random.GetRandomString(7);
+        String randomEmail = "1234";
         logger.info("created random email id for testing: " + randomEmail + "@website.com");
 
         logger.info("Enter and submit the email address in the shoe store notification form");
