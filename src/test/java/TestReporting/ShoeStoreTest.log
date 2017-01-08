@@ -1,16 +1,16 @@
-Jan 08, 2017 2:58:35 PM CommonComponents.CommonObjects WebDriverSetup
+Jan 08, 2017 3:32:34 PM CommonComponents.CommonObjects WebDriverSetup
 INFO: executing tests with Firefox browser
-Jan 08, 2017 2:58:40 PM CommonComponents.CommonObjects WebDriverSetup
+Jan 08, 2017 3:32:39 PM CommonComponents.CommonObjects WebDriverSetup
 INFO: Test preparations complete!
-Jan 08, 2017 2:58:40 PM SeleniumTests.ShoeStoreStory2Negative VerifyEmailNotificationsFailure
+Jan 08, 2017 3:32:39 PM SeleniumTests.ShoeStoreStory2Negative VerifyEmailNotificationsFailure
 INFO: Verify page tittle to prove application page loaded
-Jan 08, 2017 2:58:40 PM SeleniumTests.ShoeStoreStory2Negative VerifyEmailNotificationsFailure
-INFO: created random email id for testing: ywnim@website.com
-Jan 08, 2017 2:58:40 PM SeleniumTests.ShoeStoreStory2Negative VerifyEmailNotificationsFailure
+Jan 08, 2017 3:32:39 PM SeleniumTests.ShoeStoreStory2Negative VerifyEmailNotificationsFailure
+INFO: created random email id for testing: h0x5r@website.com
+Jan 08, 2017 3:32:39 PM SeleniumTests.ShoeStoreStory2Negative VerifyEmailNotificationsFailure
 INFO: Enter and submit the email address in the shoe store notification form
-Jan 08, 2017 2:58:40 PM SeleniumTests.ShoeStoreStory2Negative VerifyEmailNotificationsFailure
+Jan 08, 2017 3:32:39 PM SeleniumTests.ShoeStoreStory2Negative VerifyEmailNotificationsFailure
 INFO: Click the submit query button
-Jan 08, 2017 2:58:41 PM SeleniumTests.ShoeStoreStory2Negative VerifyEmailNotificationsFailure
+Jan 08, 2017 3:32:40 PM SeleniumTests.ShoeStoreStory2Negative VerifyEmailNotificationsFailure
 INFO: Verify the user has been notified of an error with the email submission
-Jan 08, 2017 2:58:41 PM CommonComponents.CommonObjects WebDriverShutDown
+Jan 08, 2017 3:32:41 PM CommonComponents.CommonObjects WebDriverShutDown
 INFO: Test Clean up complete

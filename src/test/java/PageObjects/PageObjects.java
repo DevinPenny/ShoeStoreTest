@@ -15,7 +15,10 @@ public class PageObjects {
     //selectors for page objects that do not have to be in the method
     By enterEmailSelector = By.id("remind_email_input");
     By clickRemindEmail = By.id("remind_email_submit");
-    By getSuccessFailSelector = By.xpath(".//*[@id='flash']/div");
+    By getSuccessSelector = By.xpath(".//*[@id='flash']/div");
+    By getFailSelector = By.cssSelector(".flash.alert_danger");
+
+
     By getShoeCount = By.xpath(".//*[@id='shoe_list']/li");
 
     public PageObjects(WebDriver driver){
@@ -39,13 +42,13 @@ public class PageObjects {
     }
 
     public String GetEmailConfirmation() {
-        String confirmation = driver.findElement(getSuccessFailSelector).getText();
+        String confirmation = driver.findElement(getSuccessSelector).getText();
         return confirmation;
     }
 
     public String VerifyEmailFailure() {
 
-        String emailFailure = driver.findElement(getSuccessFailSelector).getText();
+        String emailFailure = driver.findElement(getFailSelector).getText();
         return emailFailure;
     }
 

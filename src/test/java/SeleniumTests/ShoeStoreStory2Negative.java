@@ -43,6 +43,13 @@ public class ShoeStoreStory2Negative extends CommonObjects {
         logger.info("Click the submit query button");
         MainPage.ClickRemindEmail();
 
+        try{
+            Thread.sleep(1000);
+        }
+        catch(InterruptedException ie){
+            System.out.println("computer cant sleep, must be insomnia");
+        }
+
         logger.info("Verify the user has been notified of an error with the email submission");
         String emailFailure = MainPage.VerifyEmailFailure();
 
