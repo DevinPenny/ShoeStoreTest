@@ -16,6 +16,7 @@ public class PageObjects extends CommonObjects {
     public static final String EnterEmailSelector = "remind_email_input";
     public static final String GetSuccessFailSelector = ".//*[@id='flash']/div";
 
+
     public PageObjects(WebDriver driver){
         super(driver);
     }

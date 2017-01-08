@@ -16,18 +16,16 @@ package SeleniumTests;
  *
  */
 
-import CommonComponents.CommonObjects;
-import org.junit.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.openqa.selenium.By;
 import java.util.concurrent.TimeUnit;
 
-public class ShoeStoreStory2Sandbox extends CommonObjects {
+import CommonComponents.CommonObjects;
 
-    public ShoeStoreStory2Sandbox(WebDriver driver){
-        super(driver);
-    }
+public class ShoeStoreStory2Sandbox extends CommonObjects {
 
     @Test
     public void VerifyEmailNotifications() {

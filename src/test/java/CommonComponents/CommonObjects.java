@@ -27,27 +27,30 @@ import java.util.logging.*;
 
 public class CommonObjects {
 
+    protected WebDriver driver;
+    protected PageObjects MainPage;
+    protected NavigationObjects navigation;
+    protected RandomDataGenerator random;
+
+    public Logger logger = Logger.getLogger(CommonObjects.class.getName());
+    public Handler fileHandler;
+    public Formatter formatter;
+    public ExtentReports extent;
+
+    public String LogFilePath = "..\\TestReporting\\ShoeStoreTest.log";
+    public HashMap<String,String> testProperties;
+    PropertiesManager getProperties;
+
+
+
     //constructor for web driver
     public CommonObjects(WebDriver driver){
         this.driver = driver;
     }
 
-    protected WebDriver driver;
+    public CommonObjects(){
 
-    public PageObjects MainPage = new PageObjects(driver);
-    public NavigationObjects navigation = new NavigationObjects(driver);
-    public RandomDataGenerator random = new RandomDataGenerator();
-
-    public Logger logger = Logger.getLogger(CommonObjects.class.getName());
-    public Handler fileHandler = null;
-    public Formatter formatter = null;
-    public ExtentReports extent = null;
-
-    public String LogFilePath = "..\\TestReporting\\ShoeStoreTest.log";
-
-    PropertiesManager getProperties;
-    public HashMap<String,String> testProperties;
-
+    }
 
     //use method overriding to provide control over how failures are handled
     @Rule
@@ -66,6 +69,9 @@ public class CommonObjects {
     public void WebDriverSetup() {
 
         //set up all common components that are to be shared between tests
+        PageObjects MainPage = new PageObjects(driver);
+        NavigationObjects navigation = new NavigationObjects(driver);
+        RandomDataGenerator random = new RandomDataGenerator();
 
         //get the properties from the properties file, the return is a hash map of all properties
         try {
@@ -99,9 +105,8 @@ public class CommonObjects {
             ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), true);
 
         }catch (Exception e) {
-            logger.severe("Could instantiate extent reports");
+            logger.severe("problem with extent reports");
         }
-
 
         //instantiate the web driver based on the the TestBrowser value in the properties file
         try {

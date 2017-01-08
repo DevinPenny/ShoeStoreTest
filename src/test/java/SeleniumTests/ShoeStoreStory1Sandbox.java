@@ -17,8 +17,7 @@ package SeleniumTests;
  */
 
 import CommonComponents.CommonObjects;
-import NavigationObjects.NavigationObjects;
-import PageObjects.PageObjects;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import org.junit.Assert;

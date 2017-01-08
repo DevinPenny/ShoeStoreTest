@@ -17,17 +17,10 @@ package SeleniumTests;
  */
 
 import CommonComponents.CommonObjects;
-import org.junit.*;
-import org.openqa.selenium.WebDriver;
-
+import org.junit.Test;
 import java.util.concurrent.TimeUnit;
 
-
 public class ShoeStoreStory2 extends CommonObjects {
-
-    public ShoeStoreStory2(WebDriver driver){
-        super(driver);
-    }
 
     @Test
     public void VerifyEmailNotifications() {

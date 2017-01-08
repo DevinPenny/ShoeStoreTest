@@ -19,13 +19,8 @@ package SeleniumTests;
 import CommonComponents.CommonObjects;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 
 public class ShoeStoreStory1 extends CommonObjects {
-
-    public ShoeStoreStory1(WebDriver driver){
-        super(driver);
-    }
 
     @Test
     public void VerifyMonthlyDisplay() {
