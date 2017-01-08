@@ -17,25 +17,26 @@ package SeleniumTests;
  */
 
 import CommonComponents.CommonObjects;
+import PageObjects.PageObjects;
+import TestDataManagement.RandomDataGenerator;
+import org.junit.Assert;
 import org.junit.Test;
-import java.util.concurrent.TimeUnit;
 
 public class ShoeStoreStory2 extends CommonObjects {
+
 
     @Test
     public void VerifyEmailNotifications() {
 
-        logger.info("Maximize browser window for test reliability");
-        driver.manage().window().maximize();
+        PageObjects MainPage = new PageObjects(driver);
+        RandomDataGenerator random = new RandomDataGenerator();
 
-        logger.info("navigate to page for first test");
-        navigation.NavigateToPage();
+        logger.info("Maximize browser window for test reliability");
 
         logger.info("Verify page tittle to prove application page loaded");
         MainPage.VerifyPageTitle();
 
-        //String randomEmail = random.GetRandomString(7);
-        String randomEmail = "1234";
+        String randomEmail = random.GetRandomString(7);
         logger.info("created random email id for testing: " + randomEmail + "@website.com");
 
         logger.info("Enter and submit the email address in the shoe store notification form");
@@ -45,18 +46,23 @@ public class ShoeStoreStory2 extends CommonObjects {
         logger.info("Click the submit query button");
         MainPage.ClickRemindEmail();
 
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        try{
+            Thread.sleep(500);
+        }
+        catch(InterruptedException ie){
+            System.out.println("computer cant sleep, must be insomnia");
+        }
 
         logger.info("Verify the user has been notified of successful email submission");
+        String emailConfirmation = MainPage.GetEmailConfirmation();
 
-/*
         try{
-            Assert.assertTrue(MainPage.GetEmailConfirmation(randomEmail + "@shoestoretesting.com")
-                    .equals("Thanks! We will notify you of our new shoes at this email: " + randomEmail + "@shoestoretesting.com"));
+
+            Assert.assertTrue(emailConfirmation.equalsIgnoreCase("Thanks! We will notify you of our new shoes at this email: " + randomEmail + "1234@shoestoretesting.com"));
         }
         catch(AssertionError e){
             logger.severe("Email confirmation message incorrect!");
         }
-        */
+
     }
 }

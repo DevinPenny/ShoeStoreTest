@@ -28,9 +28,9 @@ import java.util.logging.*;
 public class CommonObjects {
 
     protected WebDriver driver;
-    protected PageObjects MainPage;
-    protected NavigationObjects navigation;
-    protected RandomDataGenerator random;
+    public PageObjects MainPage;
+    public NavigationObjects navigation;
+    public RandomDataGenerator random;
 
     public Logger logger = Logger.getLogger(CommonObjects.class.getName());
     public Handler fileHandler;
@@ -41,15 +41,6 @@ public class CommonObjects {
     public HashMap<String,String> testProperties;
     PropertiesManager getProperties;
 
-
-    //constructor for web driver
-    public CommonObjects(WebDriver driver){
-        this.driver = driver;
-    }
-
-    public CommonObjects(){
-
-    }
 
     //use method overriding to provide control over how failures are handled
     @Rule
@@ -66,11 +57,6 @@ public class CommonObjects {
     //this is where common objects are created so that all tests can use them
     @Before
     public void WebDriverSetup() {
-
-        //set up all common components that are to be shared between tests
-        PageObjects MainPage = new PageObjects(driver);
-        NavigationObjects navigation = new NavigationObjects(driver);
-        RandomDataGenerator random = new RandomDataGenerator();
 
         //get the properties from the properties file, the return is a hash map of all properties
         try {
@@ -131,6 +117,11 @@ public class CommonObjects {
         } catch(Exception e) {
             logger.severe("Error Loading driver for: " + testProperties.get("TestBrowser") + " exception:" + e);
         }
+
+        //maximize browser window for test reliability
+        driver.manage().window().maximize();
+        //navigate to the page for testing
+        driver.get(testProperties.get("ApplicationURI"));
 
         logger.info("Test preparations complete!");
     }

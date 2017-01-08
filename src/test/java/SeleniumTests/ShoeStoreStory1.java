@@ -17,19 +17,17 @@ package SeleniumTests;
  */
 
 import CommonComponents.CommonObjects;
+import PageObjects.PageObjects;
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.WebElement;
 
 public class ShoeStoreStory1 extends CommonObjects {
 
     @Test
     public void VerifyMonthlyDisplay() {
 
-        logger.info("Maximize browser window for test reliability");
-        driver.manage().window().maximize();
-
-        logger.info("navigate to page for first test");
-        navigation.NavigateToPage();
+        PageObjects MainPage = new PageObjects(driver);
 
         logger.info("Verify page tittle to prove application page loaded");
         MainPage.VerifyPageTitle();
@@ -39,34 +37,46 @@ public class ShoeStoreStory1 extends CommonObjects {
             logger.info("navigate to month " + month);
             MainPage.ClickMonthByNumber(month);
 
-            //fix this to get the proper shoe count
             //count the number of shoes for the selected month
-
-            int shoeCount = 2;
-            //MainPage = MainPage.GetShoeCount();
+            int shoeCount = MainPage.GetShoeCount();
             logger.info("shoe count is ");
-
 
 
             for(int i=1; i<shoeCount+1; i++) {
 
+                //verify that the shoe listing has a description
                 logger.info("verify the blurb for shoe " + i + " of " + shoeCount);
-                MainPage = MainPage.GetShoeBlurb(i);
+                String shoeBlurb = MainPage.GetShoeBlurb(i);
 
+                try{
+                    Assert.assertFalse(shoeBlurb.isEmpty());
+                }
+                catch(AssertionError e){
+                    logger.severe("Shoe listing " + shoeCount + "is missing description!" );
+                }
 
-                //put the asserts into a try catch or something so the test continues when there is a failure
-                Assert.assertFalse(MainPage.GetShoeBlurb(i).toString().isEmpty());
 
                 //find the image and verify isDisplayed() this may not be the best way;
                 logger.info("verify the image of the shoe " + i + " of " + shoeCount);
-                MainPage = MainPage.CheckShoeImage(i);
+                WebElement shoeImage = MainPage.CheckShoeImage(i);
 
-                //Assert.assertTrue(imagePresent);
+                try{
+                    Assert.assertTrue(shoeImage.isDisplayed());
+                }
+                catch(AssertionError e){
+                    logger.severe("Shoe listing" + shoeCount + " is missing image!");
+                }
 
+                //verify that the shoe listing has a price listed
                 logger.info("verify the pricing of the shoe " + i + " of " + shoeCount);
-                MainPage = MainPage.GetShoePrice(i);
-                //logger.info(shoePrice);
-                //Assert.assertFalse(shoePrice.isEmpty());
+                String shoePrice = MainPage.GetShoePrice(i);
+
+                try{
+                    Assert.assertFalse(shoePrice.isEmpty());
+                }
+                catch(AssertionError e){
+                    logger.severe("Shoe listing " + shoeCount + "is missing price!");
+                }
             }
         }
     }

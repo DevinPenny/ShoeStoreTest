@@ -17,6 +17,8 @@ package SeleniumTests;
  */
 
 import CommonComponents.CommonObjects;
+import PageObjects.PageObjects;
+import TestDataManagement.RandomDataGenerator;
 import org.junit.Test;
 import java.util.concurrent.TimeUnit;
 
@@ -25,11 +27,8 @@ public class ShoeStoreStory2Negative extends CommonObjects {
     @Test
     public void VerifyEmailNotificationsFailure() {
 
-        logger.info("Maximize browser window for test reliability");
-        driver.manage().window().maximize();
-
-        logger.info("navigate to page for first test");
-        navigation.NavigateToPage();
+        PageObjects MainPage = new PageObjects(driver);
+        RandomDataGenerator random = new RandomDataGenerator();
 
         logger.info("Verify page tittle to prove application page loaded");
         MainPage.VerifyPageTitle();
@@ -44,7 +43,12 @@ public class ShoeStoreStory2Negative extends CommonObjects {
         logger.info("Click the submit query button");
         MainPage.ClickRemindEmail();
 
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        try{
+            Thread.sleep(500);
+        }
+        catch(InterruptedException ie){
+            System.out.println("computer cant sleep, must be insomnia");
+        }
 
         logger.info("Verify the user has been notified of an error with the email submission");
         MainPage.VerifyEmailFailure();
