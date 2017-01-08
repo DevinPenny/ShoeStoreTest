@@ -20,6 +20,7 @@ import CommonComponents.CommonObjects;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -29,10 +30,11 @@ import java.util.concurrent.TimeUnit;
 
 public class ShoeStoreStory1Sandbox extends CommonObjects {
 
-    public ExtentReports extent;
-
     @Test
     public void VerifyMonthlyDisplay() {
+
+        ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), true);
+        ExtentTest extentTest = extent.startTest("Verify shoe list");
 
         logger.info("Maximize browser window for test reliability");
         driver.manage().window().maximize();
@@ -42,6 +44,8 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
 
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
+        extentTest.log(LogStatus.PASS, "Log into test page");
+
         //this for loop needs to go into the page objects after it is working
         for(int month=1; month<13; month++){
 
@@ -50,7 +54,7 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
             driver.findElement(By.xpath(".//*[@id='header_nav']/nav/ul/li[" + month +"]/a")).click();
 
             try{
-                Thread.sleep(1000);
+                Thread.sleep(500);
             }
             catch(InterruptedException ie){
                 logger.severe("computer has insomnia and can not sleep");
@@ -61,20 +65,8 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
 
             logger.info("Shoe count: " + shoeCount);
 
+
             for(int i=1; i<shoeCount+1; i++) {
-
-
-                try{
-                    ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), true);
-
-                } catch (Exception e) {
-                    logger.severe("could not create extent report");
-                }
-
-
-
-             //   ExtentTest test = extent.startTest("Verify shoe list for month " + month, "Sample description");
-
 
                 logger.info("verify the blurb for shoe" + i + " of " + shoeCount);
                 String shoeBlurb = driver.findElement(By.xpath(".//*[@id='shoe_list']/li[" + i + "]/div/table/tbody/tr[3]/td[2]")).getText();
@@ -82,9 +74,11 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
 
                 try{
                     Assert.assertFalse(shoeBlurb.isEmpty());
+                    extentTest.log(LogStatus.PASS, "month " + month + " verify the blurb for shoe " + i + " of " + shoeCount);
                 }
                 catch(AssertionError e){
                     logger.severe("Shoe listing " + shoeCount + "is missing description!" );
+                    extentTest.log(LogStatus.FAIL, "month " + month + " issue with the blurb for shoe " + i + " of " + shoeCount);
                 }
 
                 logger.info("verify the image of the shoe" + i + " of " + shoeCount);
@@ -92,9 +86,11 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
 
                 try{
                     Assert.assertTrue(shoeImage.isDisplayed());
+                    extentTest.log(LogStatus.PASS, "month " + month + " verify the image of the shoe " + i + " of " + shoeCount);
                 }
                 catch(AssertionError e){
                     logger.severe("Shoe listing" + shoeCount + " is missing image!");
+                    extentTest.log(LogStatus.FAIL, "month " + month + " issue with the image of the shoe " + i + " of " + shoeCount);
                 }
 
                 logger.info("verify the pricing of the shoe" + i + " of " + shoeCount);
@@ -103,15 +99,18 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
 
                 try{
                     Assert.assertFalse(shoePrice.isEmpty());
+                    extentTest.log(LogStatus.PASS, "month " + month + " verify the pricing of the shoe " + i + " of " + shoeCount);
                 }
                 catch(AssertionError e){
-                    logger.severe("Shoe listing " + shoeCount + "is missing price!");
+                    logger.severe("month " + month + " Shoe listing " + shoeCount + "is missing price!");
+                    extentTest.log(LogStatus.FAIL, "month " + month + " issue with the pricing of the shoe " + i + " of " + shoeCount);
+
                 }
 
-                //extent.endTest(test);
+                extent.endTest(extentTest);
 
             }
-            //extent.flush();
+            extent.flush();
         }
     }
 }

@@ -37,7 +37,6 @@ public class CommonObjects {
     public Formatter formatter;
     public ExtentReports extent;
 
-    public String LogFilePath = "..\\TestReporting\\ShoeStoreTest.log";
     public HashMap<String,String> testProperties;
     PropertiesManager getProperties;
 
@@ -68,7 +67,7 @@ public class CommonObjects {
 
         //set up file handler for the logger object
         try {
-            fileHandler = new FileHandler(LogFilePath);
+            fileHandler = new FileHandler(testProperties.get("LogFilePath"));
         }catch (IOException e){
             logger.severe("Caught fileHandler IOException: " + e);
         }
@@ -87,7 +86,7 @@ public class CommonObjects {
 
         //set up the test reporter using extent reports
         try {
-            ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), true);
+            ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), false);
 
         }catch (Exception e) {
             logger.severe("problem with extent reports");
