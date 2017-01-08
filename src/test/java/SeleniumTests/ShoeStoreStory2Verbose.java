@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 
 import CommonComponents.CommonObjects;
 
-public class ShoeStoreStory2Sandbox extends CommonObjects {
+public class ShoeStoreStory2Verbose extends CommonObjects {
 
     @Test
     public void VerifyEmailNotifications() {

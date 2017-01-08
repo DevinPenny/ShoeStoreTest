@@ -10,6 +10,6 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({ShoeStoreStory1.class,ShoeStoreStory2.class, ShoeStoreStory2Negative.class})
+@Suite.SuiteClasses({ShoeStoreStory1Verbose.class, ShoeStoreStory2Simple.class, ShoeStoreStory2Negative.class})
 
 public class TestRunner {}

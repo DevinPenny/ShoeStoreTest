@@ -19,8 +19,8 @@ package SeleniumTests;
 import CommonComponents.CommonObjects;
 import PageObjects.PageObjects;
 import TestDataManagement.RandomDataGenerator;
+import org.junit.Assert;
 import org.junit.Test;
-import java.util.concurrent.TimeUnit;
 
 public class ShoeStoreStory2Negative extends CommonObjects {
 
@@ -43,15 +43,10 @@ public class ShoeStoreStory2Negative extends CommonObjects {
         logger.info("Click the submit query button");
         MainPage.ClickRemindEmail();
 
-        try{
-            Thread.sleep(500);
-        }
-        catch(InterruptedException ie){
-            System.out.println("computer cant sleep, must be insomnia");
-        }
-
         logger.info("Verify the user has been notified of an error with the email submission");
-        MainPage.VerifyEmailFailure();
+        String emailFailure = MainPage.VerifyEmailFailure();
+
+        Assert.assertTrue(emailFailure.equals("Invalid email format. Ex. name@example.com"));
 
     }
 }

@@ -22,7 +22,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
 
-public class ShoeStoreStory1 extends CommonObjects {
+public class ShoeStoreStory1Simple extends CommonObjects {
 
     @Test
     public void VerifyMonthlyDisplay() {
@@ -41,7 +41,6 @@ public class ShoeStoreStory1 extends CommonObjects {
             int shoeCount = MainPage.GetShoeCount();
             logger.info("shoe count is ");
 
-
             for(int i=1; i<shoeCount+1; i++) {
 
                 //verify that the shoe listing has a description
@@ -54,7 +53,6 @@ public class ShoeStoreStory1 extends CommonObjects {
                 catch(AssertionError e){
                     logger.severe("Shoe listing " + shoeCount + "is missing description!" );
                 }
-
 
                 //find the image and verify isDisplayed() this may not be the best way;
                 logger.info("verify the image of the shoe " + i + " of " + shoeCount);

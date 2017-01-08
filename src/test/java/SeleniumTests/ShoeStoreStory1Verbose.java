@@ -25,10 +25,10 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import java.util.concurrent.TimeUnit;
 
 
-public class ShoeStoreStory1Sandbox extends CommonObjects {
+
+public class ShoeStoreStory1Verbose extends CommonObjects {
 
     @Test
     public void VerifyMonthlyDisplay() {
@@ -43,8 +43,6 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
 
         logger.info("navigate to page for first test");
         driver.get(testProperties.get("ApplicationURI"));
-
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         extentTest.log(LogStatus.PASS, "Log into test page");
 
@@ -116,13 +114,11 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
                 }
 
                 extent.endTest(extentTest);
-
             }
 
             extent.flush();
-
         }
+        //fail test in eyes of junit if anything is missing
         Assert.assertTrue(monthPass);
-
     }
 }

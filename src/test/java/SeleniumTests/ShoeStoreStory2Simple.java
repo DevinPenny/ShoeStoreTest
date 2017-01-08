@@ -19,10 +19,11 @@ package SeleniumTests;
 import CommonComponents.CommonObjects;
 import PageObjects.PageObjects;
 import TestDataManagement.RandomDataGenerator;
+import com.relevantcodes.extentreports.LogStatus;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ShoeStoreStory2 extends CommonObjects {
+public class ShoeStoreStory2Simple extends CommonObjects {
 
 
     @Test
@@ -31,10 +32,12 @@ public class ShoeStoreStory2 extends CommonObjects {
         PageObjects MainPage = new PageObjects(driver);
         RandomDataGenerator random = new RandomDataGenerator();
 
-        logger.info("Maximize browser window for test reliability");
+        extent.startTest("Verify email notifications");
 
         logger.info("Verify page tittle to prove application page loaded");
         MainPage.VerifyPageTitle();
+
+        //extentTest.log(LogStatus.PASS, "Log into test page succesful");
 
         String randomEmail = random.GetRandomString(7);
         logger.info("created random email id for testing: " + randomEmail + "@website.com");
@@ -59,10 +62,13 @@ public class ShoeStoreStory2 extends CommonObjects {
         try{
 
             Assert.assertTrue(emailConfirmation.equalsIgnoreCase("Thanks! We will notify you of our new shoes at this email: " + randomEmail + "1234@shoestoretesting.com"));
+            extentTest.log(LogStatus.PASS, "Email confirmation found");
         }
         catch(AssertionError e){
             logger.severe("Email confirmation message incorrect!");
+            extentTest.log(LogStatus.FAIL, "Email confirmation message incorrect!");
         }
+        extent.endTest(extentTest);
 
     }
 }

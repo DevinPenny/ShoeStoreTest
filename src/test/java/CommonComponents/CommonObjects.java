@@ -3,11 +3,10 @@
  */
 package CommonComponents;
 
-import NavigationObjects.NavigationObjects;
-import PageObjects.PageObjects;
+
 import TestDataManagement.PropertiesManager;
-import TestDataManagement.RandomDataGenerator;
 import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -28,14 +27,12 @@ import java.util.logging.*;
 public class CommonObjects {
 
     protected WebDriver driver;
-    public PageObjects MainPage;
-    public NavigationObjects navigation;
-    public RandomDataGenerator random;
 
     public Logger logger = Logger.getLogger(CommonObjects.class.getName());
     public Handler fileHandler;
     public Formatter formatter;
     public ExtentReports extent;
+    public ExtentTest extentTest;
 
     public HashMap<String,String> testProperties;
     PropertiesManager getProperties;
@@ -86,13 +83,18 @@ public class CommonObjects {
 
         //set up the test reporter using extent reports
         try {
-            ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), false);
-
+            extent = new ExtentReports(testProperties.get("ExtentReportPath"), true);
         }catch (Exception e) {
             logger.severe("problem with extent reports");
         }
 
         //instantiate the web driver based on the the TestBrowser value in the properties file
+        //If you are using a windows machine you need to change setProperty to use the windows version of the driver
+        //I could have automated this but I was lazy
+        //System.setProperty("webdriver.gecko.driver","geckodriver_win64/geckodriver");
+        //System.setProperty("webdriver.chrome.driver", "chromedriver_win32/chromedriver");
+
+
         try {
             switch (testProperties.get("TestBrowser")){
                 case "firefox":
@@ -129,6 +131,7 @@ public class CommonObjects {
     @After
     public void WebDriverShutDown(){
 
+        extent.flush();
         driver.close();
         driver.quit();
         logger.info("Test Clean up complete");
