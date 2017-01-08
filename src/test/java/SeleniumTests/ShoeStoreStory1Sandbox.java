@@ -33,6 +33,8 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
     @Test
     public void VerifyMonthlyDisplay() {
 
+        boolean monthPass = true;
+
         ExtentReports extent = new ExtentReports(testProperties.get("ExtentReportPath"), true);
         ExtentTest extentTest = extent.startTest("Verify shoe list");
 
@@ -47,11 +49,14 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
         extentTest.log(LogStatus.PASS, "Log into test page");
 
         //this for loop needs to go into the page objects after it is working
-        for(int month=1; month<13; month++){
+        for(int intMonth=1; intMonth<14; intMonth++){
 
+            //get month label
+            String month = driver.findElement(By.xpath(".//*[@id='header_nav']/nav/ul/li[" + intMonth +"]/a")).getText();
             logger.info("navigate to month " + month);
 
-            driver.findElement(By.xpath(".//*[@id='header_nav']/nav/ul/li[" + month +"]/a")).click();
+            //navigate to month
+            driver.findElement(By.xpath(".//*[@id='header_nav']/nav/ul/li[" + intMonth +"]/a")).click();
 
             try{
                 Thread.sleep(500);
@@ -75,10 +80,12 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
                 try{
                     Assert.assertFalse(shoeBlurb.isEmpty());
                     extentTest.log(LogStatus.PASS, "month " + month + " verify the blurb for shoe " + i + " of " + shoeCount);
+
                 }
                 catch(AssertionError e){
                     logger.severe("Shoe listing " + shoeCount + "is missing description!" );
                     extentTest.log(LogStatus.FAIL, "month " + month + " issue with the blurb for shoe " + i + " of " + shoeCount);
+                    monthPass = false;
                 }
 
                 logger.info("verify the image of the shoe" + i + " of " + shoeCount);
@@ -91,6 +98,7 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
                 catch(AssertionError e){
                     logger.severe("Shoe listing" + shoeCount + " is missing image!");
                     extentTest.log(LogStatus.FAIL, "month " + month + " issue with the image of the shoe " + i + " of " + shoeCount);
+                    monthPass = false;
                 }
 
                 logger.info("verify the pricing of the shoe" + i + " of " + shoeCount);
@@ -104,13 +112,17 @@ public class ShoeStoreStory1Sandbox extends CommonObjects {
                 catch(AssertionError e){
                     logger.severe("month " + month + " Shoe listing " + shoeCount + "is missing price!");
                     extentTest.log(LogStatus.FAIL, "month " + month + " issue with the pricing of the shoe " + i + " of " + shoeCount);
-
+                    monthPass = false;
                 }
 
                 extent.endTest(extentTest);
 
             }
+
             extent.flush();
+
         }
+        Assert.assertTrue(monthPass);
+
     }
 }
