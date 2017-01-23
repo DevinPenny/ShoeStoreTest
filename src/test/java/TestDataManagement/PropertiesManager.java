@@ -14,7 +14,7 @@ import java.util.Set;
 
 public class PropertiesManager {
 
-    public String parameterFilePath = "/Users/devinfox/IdeaProjects/ShoeStoreTest/src/test/java/TestDataManagement/PropertiesFiles/AutomationProperties.properties";
+    public String parameterFilePath = ".//src/test/java/TestDataManagement/PropertiesFiles/AutomationProperties.properties";
 
     //public String parameterFilePath = "./PropertiesFiles/AutomationProperties.properties";
 
